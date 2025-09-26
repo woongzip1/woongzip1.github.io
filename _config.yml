@@ -633,9 +633,10 @@ jsonresume:
   - basics
   - work
   - education
-  - publications
+  - international_publications
+  - domestic_publications
   - projects
-  - volunteer
+  - extracurricular_activities
   - awards
   - certificates
   - skills

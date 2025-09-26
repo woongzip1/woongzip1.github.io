@@ -88,9 +88,18 @@ layout: default
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
           <a class="anchor" id="{{ data[0] }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
+            {% assign section_key = data[0] %}
+            {% assign section_title = section_key | capitalize %}
+            {% if section_key == 'international_publications' %}
+              {% assign section_title = 'International Publications' %}
+            {% elsif section_key == 'domestic_publications' %}
+              {% assign section_title = 'Domestic Publications' %}
+            {% elsif section_key == 'extracurricular_activities' %}
+              {% assign section_title = 'Extracurricular Activities' %}
+            {% endif %}
+            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
             <div>
-              {% case data[0] %}
+              {% case section_key %}
                 {% when 'basics' %}
                   {% include resume/basics.liquid %}
                 {% when 'education' %}
@@ -107,6 +116,10 @@ layout: default
                   {% include resume/skills.liquid %}
                 {% when 'publications' %}
                   {% include resume/publications.liquid %}
+                {% when 'international_publications' %}
+                  {% include resume/publications.liquid %}
+                {% when 'domestic_publications' %}
+                  {% include resume/publications.liquid %}
                 {% when 'languages' %}
                   {% include resume/languages.liquid %}
                 {% when 'interests' %}
@@ -115,6 +128,8 @@ layout: default
                   {% include resume/certificates.liquid %}
                 {% when 'references' %}
                   {% include resume/references.liquid %}
+                {% when 'extracurricular_activities' %}
+                  {% include resume/volunteer.liquid %}
                 {% else %}
 
               {% endcase %}

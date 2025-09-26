@@ -6,7 +6,7 @@ subtitle: M.S. Student in Electrical & Electonic Engineering, Yonsei University.
 
 profile:
   align: right
-  image: temp.jpg
+  image: tempimg.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 

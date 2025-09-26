@@ -8,8 +8,6 @@
     "url": "https://woongzip1.github.io",
     "summary": "M.S. candidate at Yonsei University specializing in Digital Signal Processing, Speech Signal Processing, and Generative Models. Experienced in audio compression and generation with a strong publication record.",
     "location": {
-      "address": "",
-      "postalCode": "",
       "city": "Seoul",
       "countryCode": "KR",
       "region": "South Korea"
@@ -32,6 +30,30 @@
       }
     ]
   },
+  "education": [
+    {
+      "institution": "Yonsei University",
+      "location": "Seoul, South Korea",
+      "url": "https://www.yonsei.ac.kr",
+      "area": "Electrical and Electronic Engineering",
+      "studyType": "M.S.",
+      "startDate": "2024-03-01",
+      "endDate": "2026-02-01",
+      "score": "",
+      "courses": ["Advisor: Prof. Hong-Goo Kang"]
+    },
+    {
+      "institution": "Yonsei University",
+      "location": "Seoul, South Korea",
+      "url": "https://www.yonsei.ac.kr",
+      "area": "Electrical and Electronic Engineering",
+      "studyType": "B.S.",
+      "startDate": "2018-03-01",
+      "endDate": "2024-02-01",
+      "score": "4.0 / 4.5",
+      "courses": []
+    }
+  ],
   "work": [
     {
       "name": "Yonsei University, DSPAI Lab",
@@ -57,52 +79,76 @@
       "highlights": []
     }
   ],
-  "volunteer": [
+  "international_publications": [
     {
-      "organization": "Humans of Yonsei (Student Storytelling and Interview Organization)",
-      "location": "Seoul, South Korea",
-      "position": "Editor-in-Chief",
+      "name": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
+      "publisher": "Submitted to ICASSP 2026",
+      "releaseDate": "2025-09-18",
       "url": "",
-      "startDate": "2022-03-01",
-      "endDate": "2023-06-01",
-      "summary": "",
-      "highlights": []
+      "summary": "Authors: Woongjib Choi, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
     },
     {
-      "organization": "Republic of Korea Army",
-      "location": "Pocheon, South Korea",
-      "position": "Sergeant, Repair Parts and Tool Supply Specialist",
+      "name": "Neural Joint Stereo Coding for High Spatial Fidelity via Explicit Binaural Cue Loss Functions",
+      "publisher": "Submitted to ICASSP 2026",
+      "releaseDate": "2025-09-18",
       "url": "",
-      "startDate": "2020-04-01",
-      "endDate": "2021-10-01",
-      "summary": "Completed mandatory military service.",
-      "highlights": []
+      "summary": "Authors: Jaehun Shin, Woongjib Choi, Jihyun Lee, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
+    },
+    {
+      "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulated Data Augmentation",
+      "publisher": "Submitted to ICASSP 2026",
+      "releaseDate": "2025-09-18",
+      "url": "",
+      "summary": "Authors: Sangmin Lee, Woongjib Choi, Jihyun Kim, and Hong-Goo Kang"
+    },
+    {
+      "name": "Neural Spectral Band Generation for Audio Coding",
+      "publisher": "INTERSPEECH 2025",
+      "releaseDate": "2025-07-28",
+      "url": "",
+      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
     }
   ],
-  "education": [
+  "domestic_publications": [
     {
-      "institution": "Yonsei University",
-      "location": "Seoul, South Korea",
-      "url": "https://www.yonsei.ac.kr",
-      "area": "Electrical and Electronic Engineering",
-      "studyType": "M.S.",
-      "startDate": "2024-03-01",
-      "endDate": "2026-02-01",
-      "score": "",
-      "courses": [
-        "Advisor: Prof. Hong-Goo Kang"
-      ]
+      "name": "DNN-based Speech Codec Enhancement Utilizing Conditional Flow Matching",
+      "publisher": "KIBME Conference 2024",
+      "releaseDate": "2025-06-01",
+      "url": "",
+      "summary": "Authors: Jaehoon Shin, Woongjib Choi, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
     },
     {
-      "institution": "Yonsei University",
-      "location": "Seoul, South Korea",
-      "url": "https://www.yonsei.ac.kr",
-      "area": "Electrical and Electronic Engineering",
-      "studyType": "B.S.",
-      "startDate": "2018-03-01",
-      "endDate": "2024-02-01",
-      "score": "4.0 / 4.5",
-      "courses": []
+      "name": "Non-Blind Speech Bandwidth Extension Using Pre-Trained Self-Supervised Features",
+      "publisher": "IEIE Conference 2024",
+      "releaseDate": "2024-06-01",
+      "url": "",
+      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, and Hong-Goo Kang"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Context-Aware Time-Scale Modification (TSM) with LLM Guidance",
+      "summary": "Developed a TSM system that combines the traditional SOLA algorithm with an LLM to selectively control speech speed in important frames for the 'Speech Signal Processing' course.",
+      "highlights": [],
+      "startDate": "2024-09-01",
+      "endDate": "2024-12-01",
+      "url": ""
+    },
+    {
+      "name": "LAUD: Large Language Model as a Universal ASR Decoder",
+      "summary": "Developed a multilingual ASR framework that utilizes a speech foundation model with the Roman alphabet as a universal intermediate representation for the 'Speech Interface' course.",
+      "highlights": [],
+      "startDate": "2024-03-01",
+      "endDate": "2024-06-01",
+      "url": ""
+    },
+    {
+      "name": "A Technical Overview of Deep Learning Based Single-Image Super-Resolution Methods",
+      "summary": "Investigated and compared three major categories on single-image super-resolution: external learning-based (e.g., SRGAN), internal learning-based (e.g., ZSSR), and Transformer-based approaches (e.g., SwinIR).",
+      "highlights": ["Undergraduate Capstone Project"],
+      "startDate": "2023-06-01",
+      "endDate": "2023-12-01",
+      "url": ""
     }
   ],
   "awards": [
@@ -119,123 +165,49 @@
       "summary": "Recipient for both the Spring 2023 and Fall 2023 semesters based on academic excellence."
     }
   ],
-  "certificates": [],
-  "publications": [
-    {
-      "name": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
-      "publisher": "Submitted to ICASSP 2026",
-      "releaseDate": "2025-09-01",
-      "url": "",
-      "summary": "Authors: Woongjib Choi, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
-    },
-    {
-      "name": "Neural Joint Stereo Coding for High Spatial Fidelity via Explicit Binaural Cue Loss Functions",
-      "publisher": "Submitted to ICASSP 2026",
-      "releaseDate": "2025-09-01",
-      "url": "",
-      "summary": "Authors: Jaehun Shin, Woongjib Choi, Jihyun Lee, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
-    },
-    {
-      "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulated Data Augmentation",
-      "publisher": "Submitted to ICASSP 2026",
-      "releaseDate": "2025-09-01",
-      "url": "",
-      "summary": "Authors: Sangmin Lee, Woongjib Choi, Jihyun Kiom, and Hong-Goo Kang"
-    },
-    {
-      "name": "Neural Spectral Band Generation for Audio Coding",
-      "publisher": "INTERSPEECH 2025",
-      "releaseDate": "2025-01-01",
-      "url": "",
-      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
-    },
-    {
-      "name": "DNN-based Speech Codec Enhancement Utilizing Conditional Flow Matching",
-      "publisher": "KIBME Conference 2024",
-      "releaseDate": "2024-01-01",
-      "url": "",
-      "summary": "Authors: Jaehoon Shin, Woongjib Choi, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
-    },
-    {
-      "name": "Non-Blind Speech Bandwidth Extension Using Pre-Trained Self-Supervised Features",
-      "publisher": "IEIE Conference 2024",
-      "releaseDate": "2024-01-01",
-      "url": "",
-      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, and Hong-Goo Kang"
-    }
-  ],
   "skills": [
     {
       "name": "Programming Languages",
-      "level": "",
-      "icon": "",
-      "keywords": [
-        "Python",
-        "MATLAB",
-        "C",
-        "Verilog"
-      ]
+      "keywords": ["Python", "MATLAB", "C", "Verilog"]
     },
     {
       "name": "Frameworks & Tools",
-      "level": "",
-      "icon": "",
-      "keywords": [
-        "PyTorch",
-        "Linux Shell"
-      ]
+      "keywords": ["PyTorch", "Linux Shell"]
     }
   ],
   "languages": [
     {
       "language": "Korean",
-      "fluency": "Native speaker",
-      "icon": ""
+      "fluency": "Native speaker"
     },
     {
       "language": "English",
-      "fluency": "Professional working proficiency",
-      "icon": ""
+      "fluency": "Professional working proficiency"
     }
   ],
-  "interests": [
+  "extracurricular_activities": [
     {
-      "name": "Audio & Speech Processing",
-      "icon": "",
-      "keywords": [
-        "Digital Signal Processing",
-        "Speech Signal Processing",
-        "Audio Compression",
-        "Audio Generation",
-        "Generative Models"
-      ]
-    }
-  ],
-  "references": [],
-  "projects": [
-    {
-      "name": "Context-Aware Time-Scale Modification (TSM) with LLM Guidance",
-      "summary": "Developed a TSM system that combines the traditional SOLA algorithm with an LLM to selectively control speech speed in important frames for the 'Speech Signal Processing' course.",
-      "highlights": [],
-      "startDate": "2024-12-01",
-      "endDate": "2024-12-01",
-      "url": ""
+      "organization": "Humans of Yonsei (Student Storytelling and Interview Organization)",
+      "location": "Seoul, South Korea",
+      "position": "Editor-in-Chief",
+      "startDate": "2022-03-01",
+      "endDate": "2023-06-01"
     },
     {
-      "name": "LAUD: Large Language Model as a Universal ASR Decoder",
-      "summary": "Developed a multilingual ASR framework that utilizes a speech foundation model with the Roman alphabet as a universal intermediate representation for the 'Speech Interface' course.",
-      "highlights": [],
-      "startDate": "2024-06-01",
-      "endDate": "2024-06-01",
-      "url": ""
+      "organization": "Republic of Korea Army",
+      "location": "Pocheon, South Korea",
+      "position": "Sergeant, Repair Parts and Tool Supply Specialist",
+      "startDate": "2020-04-01",
+      "endDate": "2021-10-01",
+      "summary": "Completed mandatory military service."
     },
     {
-      "name": "A Technical Overview of Deep Learning Based Single-Image Super-Resolution Methods",
-      "summary": "Investigated and compared three major categories on single-image super-resolution: external learning-based (e.g., SRGAN), internal learning-based (e.g., ZSSR), and Transformer-based approaches (e.g., SwinIR).",
-      "highlights": ["Undergraduate Capstone Project"],
-      "startDate": "2023-12-01",
-      "endDate": "2023-12-01",
-      "url": ""
+      "organization": "Department of Electrical and Electronic Engineering, Yonsei University",
+      "location": "Seoul, South Korea",
+      "position": "Freshman Class Representative",
+      "startDate": "2018-03-01",
+      "endDate": "2018-09-01",
+      "summary": ""
     }
   ]
 }
