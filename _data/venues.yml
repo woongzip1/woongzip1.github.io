@@ -1,17 +1,18 @@
 "AJR":
   url: https://journals.aps.org/
   color: "#00369f"
-
+  
 "INTERSPEECH":
   url: https://www.isca-speech.org/
+  color: "#5F4B8B" # Deep Purple/Violet
 
 "ICASSP":
   url: https://ieeexplore.ieee.org/xpl/conhome/1000002/all-proceedings
-  color: "#009f36"
+  color: "#00629B" # IEEE Blue
 
 "Under Review":
-  color: "#009f36"
+  color: "#6c757d" # Neutral Gray
 
 "Domestic":
   url: https://www.dbpia.co.kr/
-  color: "#009f36"
+  color: "#28a745" # Professional Green
