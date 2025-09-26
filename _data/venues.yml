@@ -1,9 +1,17 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"AJR":
+  url: https://journals.aps.org/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"INTERSPEECH":
+  url: https://www.isca-speech.org/
 
-"Vision":
+"ICASSP":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000002/all-proceedings
+  color: "#009f36"
+
+"Under Review":
+  color: "#009f36"
+
+"Domestic":
+  url: https://www.dbpia.co.kr/
   color: "#009f36"
