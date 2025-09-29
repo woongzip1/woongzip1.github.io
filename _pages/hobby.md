@@ -22,3 +22,14 @@ I'm an avid **runner** who loves running to the rhythm of energetic music. It's 
 
 #### 🎨 Style & Culture
 Beyond music and running, I enjoy exploring other cultural activities. I have a keen interest in fashion, particularly drawn to **minimal and casual styles**. I love discovering new things and embracing a wide range of cultural experiences that enrich my perspective.
+<br>
+<br>
+<br>
+
+##### 💡 Latest Updates
+&emsp;&ensp;**Recently:** I've been really into **Sade**'s music lately. If you haven't, you should definitely check out *Smooth Operator*.
+* **Sept 2025:** Saw **MUSE** live in Korea! It was incredible to finally see my all-time favorite band perform.
+* **June 2025:** Attended the **Luv(sic) Hexalogy Asia Tour** with *OMA* and *Shing02*. It was a beautiful tribute to the late *Nujabes*.
+* **April 2025:** Went to see **Ludovico Einaudi** at the Sejong Center. He's the best pianist I've been listening to the most recently.
+* **Feb 2024:** Caught **Sum 41's** final concert in Korea before they disband. A legendary and bittersweet night.
+* **Jan 2024:** Watched the film *Ryuichi Sakamoto: Opus*. It was the first time I'd ever gone to the movies by myself, and it was a really moving experience.
