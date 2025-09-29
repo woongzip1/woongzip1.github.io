@@ -8,7 +8,11 @@
   author    = {Woongjib Choi and Sangmin Lee and Hyungseob Lim and Hong-Goo Kang},
   year      = {2026},
   note      = {Submitted to ICASSP 2026},
-  abstract  = {Your abstract for UniverSR goes here.}
+  abstract  = { In this paper, we present a vocoder-free framework for audio super-resolution that employs a flow matching generative model to capture the conditional distribution of complex-valued spectral coefficients. Unlike conventional two-stage diffusion-based approaches that pre
+dict a mel-spectrogram and then rely on a pre-trained neural vocoder to synthesize waveforms, our method directly reconstructs waveforms via the inverse Short-Time Fourier Transform (iSTFT), thereby eliminating the dependence on a separate vocoder. This design not
+ only simplifies end-to-end optimization but also overcomes a critical bottleneck of two-stage pipelines, where the final audio quality is fundamentally constrained by vocoder performance. Experiments show that our model consistently produces high-fidelity 48 kHz audio
+ across diverse upsampling factors, achieving state-of-the-art performance on both speech and general audio datasets.},
+ link       = {https://anonymous13278.github.io/},
 }
 
 
@@ -18,7 +22,7 @@
   author    = {Sangmin Lee and Woongjib Choi and Jihyun Kim and Hong-Goo Kang},
   year      = {2026},
   note      = {Submitted to ICASSP 2026},
-  abstract  = {Your abstract for SAGE-LD goes here.}
+  abstract  = {.}
 }
 
 @unpublished{shin2026neural,
@@ -27,7 +31,7 @@
   author    = {Jaehun Shin and Woongjib Choi and Jihyun Lee and Hyungseob Lim and Inseon Jang and Hong-Goo Kang},
   year      = {2026},
   note      = {Submitted to ICASSP 2026},
-  abstract  = {Your abstract for Neural Joint Stereo Coding goes here.}
+  abstract  = {.}
 }
 
 @inproceedings{choi25d_interspeech,
@@ -64,32 +68,4 @@
   booktitle = {{Proceedings of the Institute of Electronics and Information Engineers (IEIE) Conference}},
   abstract  = {Bandwidth extension (BWE) is a technique that estimates high-frequency components from provided low-frequency components. Most existing deep neural network-based BWE methods rely solely on information from the band-limited audio signal. Drawing inspiration from spectral band replication (SBR), we propose a novel BWE framework that employs self-supervised pre-trained features as conditional inputs in the BWE process. Our experiments demonstrate that the proposed approach outperforms the baseline SEANet architecture in terms of log-spectral distance (LSD) and PESQ. Additionally, we explore the methodologies for extracting and quantizing self-supervised learning (SSL) features to effectively utilize them as conditional inputs.},
   link       = {https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11890997}
-}
-
-@article{PhysRev.47.777,
-  abbr      = {PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
 }
