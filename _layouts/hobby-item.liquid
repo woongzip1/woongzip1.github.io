@@ -1,0 +1,201 @@
+---
+layout: default
+---
+{% assign year = page.started | date: '%Y' %}
+{% assign tags = page.tags | join: '' %}
+{% assign categories = page.categories | join: '' %}
+
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.type or page.started %}
+      <p class="post-meta">
+        {% if page.type %}
+          <i class="fa-solid fa-heart fa-sm" style="color: var(--global-tip-block) !important"></i> {{ page.type }}
+        {% endif %}
+        {% if page.type and page.started %} &nbsp;&middot;&nbsp; {% endif %}
+        {% if page.started %}
+          <i class="fa-solid fa-calendar fa-sm" style="color: #e56565 !important"></i> <em>Started {{ page.started }}</em>
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if page.frequency or page.level %}
+      <p class="post-meta">
+        {% if page.frequency %}
+          <i class="fa-solid fa-clock fa-sm" style="color: var(--global-tip-block) !important"></i> <em>{{ page.frequency }}</em>
+        {% endif %}
+        {% if page.frequency and page.level %}
+          &nbsp;&middot;&nbsp;
+        {% endif %}
+        {% if page.level %}
+          <i class="fa-solid fa-star fa-sm" style="color: #ffd700 !important"></i> <em>{{ page.level }}</em>
+        {% endif %}
+      </p>
+    {% endif %}
+    
+    <p class="post-tags">
+      <a href="{{ year | prepend: '/more-about-me/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}</a>
+      {% if tags != '' %}
+        &nbsp;&middot;&nbsp;
+        {% for tag in page.tags %}
+          <a href="{{ tag | slugify | prepend: '/more-about-me/tag/' | relative_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
+          {% unless forloop.last %}
+            &nbsp;
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+
+      {% if categories != '' %}
+        &nbsp;&middot;&nbsp;
+        {% for category in page.categories %}
+          <a href="{{ category | slugify | prepend: '/more-about-me/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
+          {% unless forloop.last %}
+            &nbsp;
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+    <hr>
+  </header>
+
+  <article>
+    {% if content == '' %}
+      <figure class="empty-review">
+        {% if page.cover %}
+          <img class="empty-review-cover" alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          <figcaption class="empty-review-caption">
+            {{ page.title }}
+          </figcaption>
+        {% endif %}
+      </figure>
+      {% assign status = page.status | upcase %}
+      <div class="clearfix">
+        <h4>{{ status }}</h4>
+      </div>
+    {% else %}
+      <figure>
+        {% if page.cover %}
+          <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          <figcaption>
+            {{ page.title }}
+          </figcaption>
+        {% endif %}
+      </figure>
+      <br class="mobile-break" clear="right">
+      <h4>
+        {% if page.started %} Started: {{ page.started | date: '%-d %B %Y' }}. {% endif %}
+      </h4>
+      {{ content }}
+    {% endif %}
+  </article>
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>
+
+<style>
+      figure {
+        float: none;
+        width: auto;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+      }
+      figure  > img {
+
+           vertical-align: top;
+           display: block;
+           margin-right: 0px;
+           margin-left: 0px;
+           padding: 0px;
+
+      }
+      figure figcaption {
+
+        display: block;
+        caption-side: bottom;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 600px)  {
+
+        .empty-review{
+          float: left;
+          display: block; /* in-line block; */
+          margin: 0px 0px 0px 0px;  /* adjust as needed */
+          padding: 0px 0px 0px 20px;
+         /* top right bottom left */
+          }
+
+         .empty-review-caption {
+                  caption-side: left;
+                  text-align: left;
+
+
+                  }
+
+          .empty-review-cover {
+              width:250px;
+              vertical-align: top;
+              padding-right: 40px;
+              }
+
+          figure {
+
+                float: right;
+                display: in-line block; /* in-line block; */
+                margin: 0px 0px 0px 0px;  /* adjust as needed */
+                padding: 0px 0px 0px 20px;
+               /* top right bottom left */
+              }
+
+          figure img {
+                  width:300px;
+                  vertical-align: top;
+
+                }
+
+          figure figcaption {
+                  caption-side: bottom;
+                  text-align: left;
+
+                  }
+
+          .mobile-break { display: none; }
+
+  /* =Blockquote
+  -------------------------------------------------------------- */
+  blockquote {
+
+      position: relative;
+      marign: 0px;
+      display: table;
+
+  }
+  blockquote:before, blockquote:after {
+
+   /* properties to format the block quotes /*
+
+  }
+  blockquote:before {
+      top: 0;
+      left: 0;
+
+
+  }
+  blockquote:after {
+      top: 0;
+      right: 0;
+
+  }
+</style>
