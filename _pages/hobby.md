@@ -7,11 +7,11 @@ nav_order: 4
 ---
 
 > I find balance beyond my research through two main passions: music and running. 
-> My interest in audio signal processing was directly sparked by a love for genres ranging from Neo soul to Jazz, while running offers a different kind of creative recharge.
+> My interest in audio and speech signal processing was directly sparked by a love for genres ranging from Neo soul to Jazz, while running offers a different kind of creative recharge.
 
 <br>
 #### 🎵 Music
-My passion for music is a significant part of my life. It was this love for sound that naturally sparked my academic interest in **audio signal processing**. I enjoy a wide range of genres, including **Neo soul, Jazz, Piano, and Alternative Rock**. Recently, I've been loving the vibrant energy of live concerts, catching various international artists here in Korea.
+My passion for music is a significant part of my life. It was this love for sound that naturally sparked my academic interest in **how human voice and instrumental sounds are generated and processed**. I enjoy a wide range of genres, including **Neo soul, Jazz, Piano, and Alternative Rock**. Recently, I've been loving the vibrant energy of live concerts, catching various international artists here in Korea.
 <br>
 <br>
 
