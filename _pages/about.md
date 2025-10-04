@@ -11,7 +11,7 @@ profile:
   more_info: >
 
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -33,6 +33,4 @@ This interest has continued in my graduate studies, where I've explored projects
 My most recent research focuses on developing a side-information-based module for `high-frequency generation` to restore legacy audio codecs, as well as `blind audio super-resolution`. 
 I received my B.S. in Electrical and Electronic Engineering from Yonsei University in 2024 and am expected to complete my M.S. at Yonsei University in 2026.
 
-<br>
-<br>
 <br>
