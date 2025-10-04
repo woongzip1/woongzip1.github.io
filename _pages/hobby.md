@@ -32,4 +32,4 @@ Beyond music and running, I enjoy exploring other cultural activities. I have a 
 * **June 2025:** Attended the **Luv(sic) Hexalogy Asia Tour** with *OMA* and *Shing02*. It was a beautiful tribute to the late *Nujabes*.
 * **April 2025:** Went to see **Ludovico Einaudi** at the Sejong Center. He's the best pianist I've been listening to the most recently.
 * **Feb 2024:** Caught **Sum 41's** final concert in Korea before they disband. A legendary and bittersweet night.
-* **Jan 2024:** Watched the film *Ryuichi Sakamoto: Opus*. It was the first time I'd ever gone to the movies by myself, and it was a really moving experience.
+* **Jan 2024:** Watched the film **Ryuichi Sakamoto: Opus**. It was the first time I'd ever gone to the movies by myself, and it was a really moving experience.
