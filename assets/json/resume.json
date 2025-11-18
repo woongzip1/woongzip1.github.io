@@ -55,18 +55,7 @@
     }
   ],
   "work": [
-    {
-      "name": "ETRI-Yonsei Joint Research Project",
-      "position": "Researcher (Project Leader, Final 6 Months)",
-      "url": "",
-      "startDate": "2024-03-01",
-      "endDate": "2025-12-01",
-      "summary": "Collaborated with Electronics and Telecommunications Research Institute (ETRI) to develop DNN-based post-processing modules for legacy audio codecs.",
-      "highlights": [
-        "Led project coordination in final 6 months, managing joint research presentations, technical reports, and facilitating inter-institutional communications",
-        "Research resulted in 1 international conference paper, 1 domestic conference paper, and 1 patent application"
-      ]
-    },
+
     {
       "name": "Yonsei University, DSPAI Lab",
       "position": "Teaching Assistant",
@@ -79,6 +68,18 @@
         "EEE2060: Signals and Systems (Fall 2024)",
         "EEE4610: Electrical and Electronic Engineering Capstone Design (Fall 2024)",
         "EEE4420: Digital Signal Processing (Spring 2024)"
+      ]
+    },
+    {
+      "name": "ETRI-Yonsei Joint Research Project",
+      "position": "Researcher (Project Leader, Final 6 months)",
+      "url": "",
+      "startDate": "2024-03-01",
+      "endDate": "2025-12-01",
+      "summary": "Collaborated with Electronics and Telecommunications Research Institute (ETRI) to develop DNN-based post-processing modules for legacy audio codecs.",
+      "highlights": [
+        "Led project coordination in final 6 months, managing joint research presentations, technical reports, and facilitating inter-institutional communications",
+        "Research resulted in 1 international conference paper, 1 domestic conference paper, and 1 patent application"
       ]
     },
     {
