@@ -56,6 +56,18 @@
   ],
   "work": [
     {
+      "name": "ETRI-Yonsei Joint Research Project",
+      "position": "Researcher (Project Leader, Final 6 Months)",
+      "url": "",
+      "startDate": "2024-03-01",
+      "endDate": "2025-12-01",
+      "summary": "Collaborated with Electronics and Telecommunications Research Institute (ETRI) to develop DNN-based post-processing modules for legacy audio codecs.",
+      "highlights": [
+        "Led project coordination in final 6 months, managing joint research presentations, technical reports, and facilitating inter-institutional communications",
+        "Research resulted in 1 international conference paper, 1 domestic conference paper, and 1 patent application"
+      ]
+    },
+    {
       "name": "Yonsei University, DSPAI Lab",
       "position": "Teaching Assistant",
       "url": "",
@@ -165,14 +177,18 @@
       "summary": "Recipient for both the Spring 2023 and Fall 2023 semesters based on academic excellence."
     }
   ],
-  "skills": [
+"skills": [
     {
       "name": "Programming Languages",
-      "keywords": ["Python", "MATLAB", "C", "Verilog"]
+      "keywords": ["Python", "MATLAB", "C/C++", "Verilog"]
     },
     {
-      "name": "Frameworks & Tools",
-      "keywords": ["PyTorch", "Linux Shell"]
+      "name": "Frameworks & Libraries",
+      "keywords": ["PyTorch", "torchaudio", "NumPy", "SciPy", "Librosa"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Linux Shell", "Git", "Arduino", "Xilinx Vitis/Vivado"]
     }
   ],
   "languages": [
