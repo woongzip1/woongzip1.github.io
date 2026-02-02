@@ -51,7 +51,7 @@
       "startDate": "2018-03-01",
       "endDate": "2024-02-01",
       "score": "",
-      "courses": ["GPA: 4.0 / 4.5"]
+      "courses": ["GPA: 3.83 / 4.3"]
     }
   ],
   "work": [
@@ -95,21 +95,14 @@
   "international_publications": [
     {
       "name": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
-      "publisher": "Submitted to ICASSP 2026",
-      "releaseDate": "2025-09-18",
+      "publisher": "ICASSP 2026",
+      "releaseDate": "2026-01-16",
       "url": "",
       "summary": "Authors: Woongjib Choi, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
     },
     {
-      "name": "Neural Joint Stereo Coding for High Spatial Fidelity via Explicit Binaural Cue Loss Functions",
-      "publisher": "Submitted to ICASSP 2026",
-      "releaseDate": "2025-09-18",
-      "url": "",
-      "summary": "Authors: Jaehun Shin, Woongjib Choi, Jihyun Lee, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
-    },
-    {
       "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulated Data Augmentation",
-      "publisher": "Submitted to ICASSP 2026",
+      "publisher": "Preprint",
       "releaseDate": "2025-09-18",
       "url": "",
       "summary": "Authors: Sangmin Lee, Woongjib Choi, Jihyun Kim, and Hong-Goo Kang"
