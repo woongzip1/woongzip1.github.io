@@ -40,7 +40,10 @@
       "startDate": "2024-03-01",
       "endDate": "2026-02-01",
       "score": "",
-      "courses": ["Advisor: Prof. Hong-Goo Kang"]
+      "courses": [
+        "Advisor: Prof. Hong-Goo Kang",
+        "Thesis: A Multi-Rate Audio Super-Resolution Framework Using Flow Matching Without Neural Vocoders"
+      ]
     },
     {
       "institution": "Yonsei University",
@@ -51,7 +54,11 @@
       "startDate": "2018-03-01",
       "endDate": "2024-02-01",
       "score": "",
-      "courses": ["GPA: 3.83 / 4.3"]
+      "courses": [
+        "GPA: 3.83 / 4.3",
+        "Undergraduate Thesis: A Technical Overview of Deep Learning Based Single-Image Super-Resolution Methods",
+        "Two-year gap due to mandatory military service (Apr. 2020 – Oct. 2021)"
+      ]
     }
   ],
   "work": [
