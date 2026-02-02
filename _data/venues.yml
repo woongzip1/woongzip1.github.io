@@ -13,6 +13,9 @@
 "Under Review":
   color: "#6c757d" # Neutral Gray
 
+"Preprint":
+  color: "#6c757d" # Neutral Gray
+
 "Domestic":
   url: https://www.dbpia.co.kr/
   color: "#28a745" # Professional Green
