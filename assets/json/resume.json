@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Woongjib Choi",
-    "label": "AI Researcher",
+    "label": "Postgraduate Researcher",
     "image": "",
     "email": "woongzip1@dsp.yonsei.ac.kr",
     "phone": "",
-    "url": "https://woongzip1.github.io",
-    "summary": "M.S. candidate at Yonsei University specializing in Digital Signal Processing, Speech Signal Processing, and Generative Models. Experienced in audio compression and generation with a strong publication record.",
+    "url": "https://github.com/woongzip1",
+    "summary": "Bridging classic signal processing and deep learning for audio and speech, with focus on **neural audio codecs**, **bandwidth extension**, and **generative models**.",
     "location": {
       "city": "Seoul",
       "countryCode": "KR",
@@ -42,6 +42,7 @@
       "score": "",
       "courses": [
         "Advisor: Prof. Hong-Goo Kang",
+        "GPA: 4.08 / 4.30",
         "Thesis: A Multi-Rate Audio Super-Resolution Framework Using Flow Matching Without Neural Vocoders"
       ]
     },
@@ -55,28 +56,38 @@
       "endDate": "2024-02-01",
       "score": "",
       "courses": [
-        "GPA: 3.83 / 4.3",
-        "Undergraduate Thesis: A Technical Overview of Deep Learning Based Single-Image Super-Resolution Methods",
-        "Two-year gap due to mandatory military service (Apr. 2020 – Oct. 2021)"
+        "GPA: 3.83 / 4.30",
+        "Undergraduate Thesis: A Technical Overview of Deep Learning-Based Single-Image Super-Resolution Methods",
+        "Includes two-year mandatory military service (Apr. 2020 – Oct. 2021)"
       ]
     }
   ],
   "work": [
     {
       "name": "DSPAI Lab, Yonsei University",
-      "position": "Graduate Researcher",
+      "position": "Postgraduate Researcher",
       "url": "",
-      "startDate": "2024-03-01",
+      "startDate": "2026-03-01",
       "endDate": "Present",
-      "summary": "Conducting research on neural audio codecs, audio super-resolution, and generative models. Also served as a researcher for the ETRI-Yonsei Joint Research Project (Mar. 2024 – Dec. 2025).",
+      "summary": "Conducting research on neural audio codecs, tokenization, and generative models for audio under Prof. Hong-Goo Kang.",
       "highlights": [
-        "Developed DNN-based post-processing modules for legacy audio codecs.",
-        "Project leader (final 6 months): managed presentations and inter-institutional communications.",
-        "Resulted in 1 international conference paper, 1 domestic paper, and 1 patent application."
+        "In collaboration with Prof. Yongshik Lee on vehicle state classification from unintentional electromagnetic emissions, including STFT-based signal analysis and DNN-based classification."
       ]
     },
     {
-      "name": "Yonsei University, DSPAI Lab",
+      "name": "DSPAI Lab, Yonsei University",
+      "position": "Graduate Researcher",
+      "url": "",
+      "startDate": "2024-03-01",
+      "endDate": "2026-02-01",
+      "summary": "Conducted research on neural audio codecs, audio super-resolution, and generative models under Prof. Hong-Goo Kang.",
+      "highlights": [
+        "Developed bandwidth extension methods via flow matching and self-supervised representations.",
+        "**ETRI-Yonsei Joint Research Project**: Led development of DNN-based post-processing for legacy audio codecs. Served as project leader in the final 6 months, resulting in 1 int'l conference paper, 1 domestic paper, and 1 patent application."
+      ]
+    },
+    {
+      "name": "Yonsei University, Department of Electrical and Electronic Engineering",
       "position": "Teaching Assistant",
       "url": "",
       "startDate": "2024-03-01",
@@ -85,41 +96,52 @@
       "highlights": [
         "EEE2111: Analog Electronics Lab (Spring 2025)",
         "EEE2060: Signals and Systems (Fall 2024)",
-        "EEE4610: Electrical and Electronic Engineering Capstone Design (Fall 2024)",
+        "EEE4610: Capstone Design (Fall 2024) — Advised project on unified speech enhancement bridging personalized and unconditional models.",
         "EEE4420: Digital Signal Processing (Spring 2024)"
       ]
     },
     {
-      "name": "Yonsei University, SRIP Lab",
+      "name": "SRIP Lab, Yonsei University",
       "position": "Undergraduate Research Intern",
       "url": "",
       "startDate": "2023-06-01",
       "endDate": "2024-01-01",
-      "summary": "Implemented and analyzed image processing algorithms including white balancing, denoising, color interpolation (demosaicing), and super-resolution under the supervision of Prof. Moon Gi Kang.",
-      "highlights": []
+      "summary": "Implemented classical and deep learning-based image processing algorithms including white balancing, denoising, demosaicing, and super-resolution under the supervision of Prof. Moon Gi Kang.",
+      "highlights": [
+        "Undergraduate thesis: A Technical Overview of Deep Learning-Based Single-Image Super-Resolution Methods"
+      ]
     }
   ],
-  "international_publications": [
+  "peer_reviewed_publications": [
     {
       "name": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
-      "publisher": "ICASSP 2026",
+      "publisher": "**ICASSP 2026**",
       "releaseDate": "2026-01-16",
       "url": "",
-      "summary": "Authors: Woongjib Choi, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
-    },
-    {
-      "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulated Data Augmentation",
-      "publisher": "Preprint",
-      "releaseDate": "2025-09-18",
-      "url": "",
-      "summary": "Authors: Sangmin Lee, Woongjib Choi, Jihyun Kim, and Hong-Goo Kang"
+      "summary": "Authors: **Woongjib Choi**, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
     },
     {
       "name": "Neural Spectral Band Generation for Audio Coding",
-      "publisher": "INTERSPEECH 2025",
+      "publisher": "**INTERSPEECH 2025**",
       "releaseDate": "2025-07-28",
       "url": "",
-      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
+      "summary": "Authors: **Woongjib Choi**, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
+    }
+  ],
+  "preprints_submissions": [
+    {
+      "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulating Code-Switching Scenarios",
+      "publisher": "Submitted to INTERSPEECH 2026",
+      "releaseDate": "2025-10-01",
+      "url": "",
+      "summary": "Authors: Sangmin Lee, **Woongjib Choi**, Jihyun Kim, and Hong-Goo Kang"
+    },
+    {
+      "name": "UR-BERT: Scaling Text Encoders for Massively Multilingual TTS Through Universal Romanization and Speech Token Prediction",
+      "publisher": "Submitted to INTERSPEECH 2026",
+      "releaseDate": "2026-03-01",
+      "url": "",
+      "summary": "Authors: Sangmin Lee, Eekgyun Ahn, **Woongjib Choi**, and Hong-Goo Kang"
     }
   ],
   "domestic_publications": [
@@ -128,40 +150,23 @@
       "publisher": "KIBME Conference 2025",
       "releaseDate": "2025-06-01",
       "url": "",
-      "summary": "Authors: Jaehoon Shin, Woongjib Choi, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
+      "summary": "Authors: Jaehoon Shin, **Woongjib Choi**, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
     },
     {
       "name": "Non-Blind Speech Bandwidth Extension Using Pre-Trained Self-Supervised Features",
       "publisher": "IEIE Conference 2024",
       "releaseDate": "2024-06-01",
       "url": "",
-      "summary": "Authors: Woongjib Choi, Byeong Hyeon Kim, and Hong-Goo Kang"
+      "summary": "Authors: **Woongjib Choi**, Byeong Hyeon Kim, and Hong-Goo Kang"
     }
   ],
-  "projects": [
+  "patents": [
     {
-      "name": "Context-Aware Time-Scale Modification (TSM) with LLM Guidance",
-      "summary": "Developed a TSM system that combines the traditional SOLA algorithm with an LLM to selectively control speech speed in important frames for the 'Speech Signal Processing' course.",
-      "highlights": [],
-      "startDate": "2024-09-01",
-      "endDate": "2024-12-01",
-      "url": ""
-    },
-    {
-      "name": "LAUD: Large Language Model as a Universal ASR Decoder",
-      "summary": "Developed a multilingual ASR framework that utilizes a speech foundation model with the Roman alphabet as a universal intermediate representation for the 'Speech Interface' course.",
-      "highlights": [],
-      "startDate": "2024-03-01",
-      "endDate": "2024-06-01",
-      "url": ""
-    },
-    {
-      "name": "A Technical Overview of Deep Learning Based Single-Image Super-Resolution Methods",
-      "summary": "Investigated and compared three major categories on single-image super-resolution: external learning-based (e.g., SRGAN), internal learning-based (e.g., ZSSR), and Transformer-based approaches (e.g., SwinIR).",
-      "highlights": ["Undergraduate Capstone Project"],
-      "startDate": "2023-06-01",
-      "endDate": "2023-12-01",
-      "url": ""
+      "name": "Encoder and Decoder for Audio Coding Using Side Information Generated from Original Signal and Method of Operation Thereof",
+      "publisher": "Korean Intellectual Property Office",
+      "releaseDate": "2025-07-01",
+      "url": "",
+      "summary": "KR 10-2025-0096305"
     }
   ],
   "awards": [
@@ -169,7 +174,7 @@
       "title": "Dean's List",
       "date": "2023-06-01",
       "awarder": "Yonsei University",
-      "summary": "Awarded for high academic achievement, ranking within the top 3% of the college in Spring 2023."
+      "summary": "Awarded for high academic achievement, ranking within the **top 3%** of the college in Spring 2023."
     },
     {
       "title": "Academic Excellence Scholarship",
@@ -178,18 +183,34 @@
       "summary": "Recipient for both the Spring 2023 and Fall 2023 semesters based on academic excellence."
     }
   ],
-"skills": [
+  "skills": [
     {
       "name": "Programming Languages",
-      "keywords": ["Python", "MATLAB", "C/C++", "Verilog"]
+      "keywords": [
+        "Python",
+        "MATLAB",
+        "C/C++",
+        "Verilog"
+      ]
     },
     {
       "name": "Frameworks & Libraries",
-      "keywords": ["PyTorch", "torchaudio", "NumPy", "SciPy", "Librosa"]
+      "keywords": [
+        "PyTorch",
+        "torchaudio",
+        "NumPy",
+        "SciPy",
+        "Librosa"
+      ]
     },
     {
       "name": "Tools",
-      "keywords": ["Linux Shell", "Git", "Arduino", "Xilinx Vitis/Vivado"]
+      "keywords": [
+        "Linux Shell",
+        "Git",
+        "Arduino",
+        "Xilinx Vitis/Vivado"
+      ]
     }
   ],
   "languages": [
@@ -199,7 +220,7 @@
     },
     {
       "language": "English",
-      "fluency": "Professional working proficiency"
+      "fluency": "Professional working proficiency (TOEFL 104)"
     }
   ],
   "extracurricular_activities": [

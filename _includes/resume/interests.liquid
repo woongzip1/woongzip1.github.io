@@ -22,7 +22,7 @@
             <tr>
               <td></td>
               <td class="list-group-name">
-                <b>{{ item }}</b>
+                <b>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</b>
               </td>
             </tr>
           {% endfor %}

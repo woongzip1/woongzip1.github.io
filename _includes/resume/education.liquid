@@ -43,7 +43,7 @@
           <ul class="items">
             {% for item in content.courses %}
               <li>
-                <span class="item">{{ item }}</span>
+                <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
               </li>
             {% endfor %}
           </ul>

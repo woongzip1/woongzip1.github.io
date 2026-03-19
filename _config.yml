@@ -635,7 +635,8 @@ jsonresume:
   - basics
   - work
   - education
-  - international_publications
+  - peer_reviewed_publications
+  - preprints_submissions
   - domestic_publications
   - projects
   - extracurricular_activities

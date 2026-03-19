@@ -90,8 +90,10 @@ layout: default
           <div class="card mt-3 p-3">
             {% assign section_key = data[0] %}
             {% assign section_title = section_key | capitalize %}
-            {% if section_key == 'international_publications' %}
-              {% assign section_title = 'International Publications' %}
+            {% if section_key == 'peer_reviewed_publications' %}
+              {% assign section_title = 'Peer-Reviewed Publications' %}
+            {% elsif section_key == 'preprints_submissions' %}
+              {% assign section_title = 'Preprints & Submissions' %}
             {% elsif section_key == 'domestic_publications' %}
               {% assign section_title = 'Domestic Publications' %}
             {% elsif section_key == 'extracurricular_activities' %}
@@ -116,7 +118,9 @@ layout: default
                   {% include resume/skills.liquid %}
                 {% when 'publications' %}
                   {% include resume/publications.liquid %}
-                {% when 'international_publications' %}
+                {% when 'peer_reviewed_publications' %}
+                  {% include resume/publications.liquid %}
+                {% when 'preprints_submissions' %}
                   {% include resume/publications.liquid %}
                 {% when 'domestic_publications' %}
                   {% include resume/publications.liquid %}

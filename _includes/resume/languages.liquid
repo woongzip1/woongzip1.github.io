@@ -21,7 +21,7 @@
           <tr>
             <td></td>
             <td class="list-group-name">
-              <b>{{ content.fluency }}</b>
+              <b>{{ content.fluency | markdownify | remove: '<p>' | remove: '</p>' }}</b>
             </td>
           </tr>
         </tbody>

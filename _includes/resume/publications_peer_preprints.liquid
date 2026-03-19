@@ -1,0 +1,72 @@
+{% comment %}
+  resume.json의 국제/국내 publication을 통합해서
+  publisher에 "Submitted"가 포함되면 Preprints & Submissions,
+  그 외는 Peer-Reviewed Publications로 분류해서 출력합니다.
+{% endcomment %}
+
+{% assign all_publications = site.data.resume.international_publications | concat: site.data.resume.domestic_publications %}
+{% assign all_publications = all_publications | sort: 'releaseDate' | reverse %}
+
+{% assign counter = 1 %}
+
+<div class="mb-3">
+  <h5 class="font-weight-bold mb-2">Peer-Reviewed Publications</h5>
+
+  {% for content in all_publications %}
+    {% assign publisher = content.publisher | default: '' %}
+    {% if publisher contains 'Submitted' %}
+      {% continue %}
+    {% endif %}
+
+    <div class="mb-3">
+      <div>
+        <span class="font-weight-bold">• [{{ counter }}]</span>
+        {% assign authors = content.summary | replace: 'Authors: ', '' | markdownify | remove: '<p>' | remove: '</p>' %}
+        {% assign title = content.name | markdownify | remove: '<p>' | remove: '</p>' %}
+        {% assign in_text = publisher | markdownify | remove: '<p>' | remove: '</p>' %}
+
+        {{ authors }}
+        {% if authors != '' %}, {% endif %}
+        "{{ title }}", in {{ in_text }}.
+
+        {% if content.url and content.url != '' %}
+          &nbsp;<a href="{{ content.url }}" target="_blank" rel="noopener noreferrer">[link]</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+</div>
+
+<div>
+  <h5 class="font-weight-bold mb-2">Preprints &amp; Submissions</h5>
+
+  {% for content in all_publications %}
+    {% assign publisher = content.publisher | default: '' %}
+    {% unless publisher contains 'Submitted' %}
+      {% continue %}
+    {% endunless %}
+
+    <div class="mb-3">
+      <div>
+        <span class="font-weight-bold">• [{{ counter }}]</span>
+
+        {% assign authors = content.summary | replace: 'Authors: ', '' | markdownify | remove: '<p>' | remove: '</p>' %}
+        {% assign title = content.name | markdownify | remove: '<p>' | remove: '</p>' %}
+        {% assign submitted_text = publisher | markdownify | remove: '<p>' | remove: '</p>' %}
+
+        {{ authors }}
+        {% if authors != '' %}, {% endif %}
+        "{{ title }}", {{ submitted_text }}.
+
+        {% if content.url and content.url != '' %}
+          &nbsp;<a href="{{ content.url }}" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+</div>
+
