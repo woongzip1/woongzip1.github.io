@@ -9,8 +9,12 @@
 
 "ICASSP":
   url: https://ieeexplore.ieee.org/xpl/conhome/1000002/all-proceedings
-  color: "#003D82" # 
+  color: "#003D82" #
   # color: "#00629B" # IEEE Blue,"#003D82"
+
+"COLM":
+  url: https://colmweb.org/
+  color: "#3D8C82" # Dusty Teal
 
 
 "Under Review":

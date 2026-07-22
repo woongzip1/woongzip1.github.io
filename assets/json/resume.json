@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Woongjib Choi",
-    "label": "Postgraduate Researcher",
+    "label": "Incoming Ph.D. Student",
     "image": "",
     "email": "woongzip1@dsp.yonsei.ac.kr",
     "phone": "",
     "url": "https://github.com/woongzip1",
-    "summary": "Bridging classic signal processing and deep learning for audio and speech, with focus on **neural audio codecs**, **bandwidth extension**, and **generative models**.",
+    "summary": "Bridging classic signal processing and deep learning, with research interests spanning **audio and speech processing**, **audio compression**, **digital signal processing**, and **generative models**.",
     "location": {
       "city": "Seoul",
       "countryCode": "KR",
@@ -31,6 +31,19 @@
     ]
   },
   "education": [
+    {
+      "institution": "Massachusetts Institute of Technology",
+      "location": "Cambridge, MA, USA",
+      "url": "https://www.mit.edu",
+      "area": "Electrical Engineering and Computer Science",
+      "studyType": "Incoming Ph.D. Student",
+      "startDate": "2026-09-01",
+      "endDate": "",
+      "score": "",
+      "courses": [
+        "Advisor: Prof. Paris Smaragdis"
+      ]
+    },
     {
       "institution": "Yonsei University",
       "location": "Seoul, South Korea",
@@ -57,7 +70,6 @@
       "score": "",
       "courses": [
         "GPA: 3.83 / 4.30",
-        "Undergraduate Thesis: A Technical Overview of Deep Learning-Based Single-Image Super-Resolution Methods",
         "Includes two-year mandatory military service (Apr. 2020 – Oct. 2021)"
       ]
     }
@@ -68,10 +80,10 @@
       "position": "Postgraduate Researcher",
       "url": "",
       "startDate": "2026-03-01",
-      "endDate": "Present",
-      "summary": "Conducting research on neural audio codecs, tokenization, and generative models for audio under Prof. Hong-Goo Kang.",
+      "endDate": "2026-05-01",
+      "summary": "Conducted research on neural audio codecs, tokenization, and generative models for audio under Prof. Hong-Goo Kang.",
       "highlights": [
-        "In collaboration with Prof. Yongshik Lee on vehicle state classification from unintentional electromagnetic emissions, including STFT-based signal analysis and DNN-based classification."
+        "Collaborated with Prof. Yongshik Lee on vehicle state classification from unintentional electromagnetic emissions, including STFT-based signal analysis and DNN-based classification."
       ]
     },
     {
@@ -114,34 +126,41 @@
   ],
   "peer_reviewed_publications": [
     {
+      "name": "MoLGE: Mixture of Language Group Experts for Efficient Scaling of Massively Multilingual Speech Recognition",
+      "publisher": "**COLM 2026**",
+      "releaseDate": "2026-07-01",
+      "url": "",
+      "summary": "Sangmin Lee, Woojin Chung, **Woongjib Choi**, and Hong-Goo Kang"
+    },
+    {
+      "name": "UR-BERT: Scaling Text Encoders for Massively Multilingual TTS Through Universal Romanization and Speech Token Prediction",
+      "publisher": "**INTERSPEECH 2026**",
+      "releaseDate": "2026-06-01",
+      "url": "https://arxiv.org/abs/2606.11681",
+      "summary": "Sangmin Lee, Eekgyun Ahn, **Woongjib Choi**, and Hong-Goo Kang"
+    },
+    {
       "name": "UniverSR: Unified and Versatile Audio Super-Resolution via Vocoder-Free Flow Matching",
       "publisher": "**ICASSP 2026**",
       "releaseDate": "2026-01-16",
       "url": "",
-      "summary": "Authors: **Woongjib Choi**, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
+      "summary": "**Woongjib Choi**, Sangmin Lee, Hyungseob Lim, and Hong-Goo Kang"
     },
     {
       "name": "Neural Spectral Band Generation for Audio Coding",
       "publisher": "**INTERSPEECH 2025**",
       "releaseDate": "2025-07-28",
       "url": "",
-      "summary": "Authors: **Woongjib Choi**, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
+      "summary": "**Woongjib Choi**, Byeong Hyeon Kim, Hyungseob Lim, Inseon Jang, and Hong-Goo Kang"
     }
   ],
   "preprints_submissions": [
     {
       "name": "SAGE-LD: Towards Scalable and Generalizable End-to-End Language Diarization via Simulating Code-Switching Scenarios",
-      "publisher": "Submitted to INTERSPEECH 2026",
+      "publisher": "Preprint",
       "releaseDate": "2025-10-01",
       "url": "",
-      "summary": "Authors: Sangmin Lee, **Woongjib Choi**, Jihyun Kim, and Hong-Goo Kang"
-    },
-    {
-      "name": "UR-BERT: Scaling Text Encoders for Massively Multilingual TTS Through Universal Romanization and Speech Token Prediction",
-      "publisher": "Submitted to INTERSPEECH 2026",
-      "releaseDate": "2026-03-01",
-      "url": "",
-      "summary": "Authors: Sangmin Lee, Eekgyun Ahn, **Woongjib Choi**, and Hong-Goo Kang"
+      "summary": "Sangmin Lee, **Woongjib Choi**, Jihyun Kim, and Hong-Goo Kang"
     }
   ],
   "domestic_publications": [
@@ -150,14 +169,14 @@
       "publisher": "KIBME Conference 2025",
       "releaseDate": "2025-06-01",
       "url": "",
-      "summary": "Authors: Jaehoon Shin, **Woongjib Choi**, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
+      "summary": "Jaehoon Shin, **Woongjib Choi**, Byeong Hyeon Kim, Inseon Jang, and Hong-Goo Kang"
     },
     {
       "name": "Non-Blind Speech Bandwidth Extension Using Pre-Trained Self-Supervised Features",
       "publisher": "IEIE Conference 2024",
       "releaseDate": "2024-06-01",
       "url": "",
-      "summary": "Authors: **Woongjib Choi**, Byeong Hyeon Kim, and Hong-Goo Kang"
+      "summary": "**Woongjib Choi**, Byeong Hyeon Kim, and Hong-Goo Kang"
     }
   ],
   "patents": [

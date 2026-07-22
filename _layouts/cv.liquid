@@ -90,7 +90,9 @@ layout: default
           <div class="card mt-3 p-3">
             {% assign section_key = data[0] %}
             {% assign section_title = section_key | capitalize %}
-            {% if section_key == 'peer_reviewed_publications' %}
+            {% if section_key == 'basics' %}
+              {% assign section_title = 'General Information' %}
+            {% elsif section_key == 'peer_reviewed_publications' %}
               {% assign section_title = 'Peer-Reviewed Publications' %}
             {% elsif section_key == 'preprints_submissions' %}
               {% assign section_title = 'Preprints & Submissions' %}
