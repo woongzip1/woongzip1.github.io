@@ -1,6 +1,6 @@
 ---
 layout: page
-title: More About Me
+title: More about me
 permalink: /more-about-me/
 nav: true
 nav_order: 4

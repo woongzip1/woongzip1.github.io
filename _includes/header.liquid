@@ -100,19 +100,28 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {%- if p.permalink contains '://' -%}
-                    {%- assign url = p.permalink -%}
-                  {%- elsif p.permalink contains '/blog/' -%}
-                    {%- assign url = '/blog/' -%}
+                  {%- if p.cv_pdf -%}
+                    {%- if p.cv_pdf contains '://' -%}
+                      {%- assign url = p.cv_pdf -%}
+                    {%- else -%}
+                      {%- assign url = p.cv_pdf | prepend: 'assets/pdf/' -%}
+                    {%- endif -%}
+                    <a class="nav-link" href="{{ url | relative_url }}">{{- p.title -}}</a>
                   {%- else -%}
-                    {%- assign url = p.url -%}
+                    {%- if p.permalink contains '://' -%}
+                      {%- assign url = p.permalink -%}
+                    {%- elsif p.permalink contains '/blog/' -%}
+                      {%- assign url = '/blog/' -%}
+                    {%- else -%}
+                      {%- assign url = p.url -%}
+                    {%- endif %}
+                    <a class="nav-link" href="{{ url | relative_url }}">
+                      {{- p.title }}
+                      {% if page.url contains p.url %}
+                        <span class="sr-only">(current)</span>
+                      {% endif %}
+                    </a>
                   {%- endif %}
-                  <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
-                    {% if page.url contains p.url %}
-                      <span class="sr-only">(current)</span>
-                    {% endif %}
-                  </a>
                 </li>
               {% endif %}
             {% endif %}
