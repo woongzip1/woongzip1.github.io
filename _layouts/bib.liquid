@@ -46,7 +46,11 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  {%- comment -%}
+    col-sm-10 either way: the thumbnail branch used col-sm-8, which left 2 of
+    Bootstrap's 12 columns unused on the right and wrapped titles early.
+  {%- endcomment -%}
+  <div id="{{ entry.key }}" class="col-sm-10">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->

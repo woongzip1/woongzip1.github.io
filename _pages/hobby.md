@@ -16,7 +16,7 @@ show_gallery: false
 <div class="about-me-lede">
   <p>
     I spend a lot of my time listening to <strong>music</strong>, and I de-stress by <strong>running</strong>. 
-    I am always happy to talk about music across a wide range of genres, including <em>piano, soul, jazz, rock, and hip-hop</em>.
+    I am always happy to talk about music across a wide range of genres, including piano, soul, jazz, rock, and hip-hop.
     I also enjoy finding nice cafes and grabbing a <strong>coffee</strong>.
   </p>
 </div>
