@@ -23,6 +23,10 @@ $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
+// Site accent (teal). Light mode uses the base tone; dark mode needs the
+// lighter tone to keep text contrast above WCAG AA on the dark background.
+$teal-color: #3c7a89 !default;
+$teal-color-light: #65abbc !default; // $teal-color lightened ~18%
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
@@ -34,7 +38,7 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-light: rgba($teal-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
 // Font awesome location

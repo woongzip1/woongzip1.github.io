@@ -11,3 +11,7 @@ assets/libs/
 node_modules/
 vendor
 .idea
+CLAUDE.md
+tasks.md
+todo.md
+load_hp.sh

@@ -1,0 +1,122 @@
+/*******************************************************************************
+ * Photo feed, embedded in /more-about-me/.
+ *
+ * Deliberately an Instagram-style feed rather than a masonry wall: uniform
+ * square tiles on a tight gutter, no per-tile captions. The photos carry the
+ * page, so the only chrome is the filter row and a hover overlay.
+ ******************************************************************************/
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  // Sits below the updates list, so it needs a clear break above it.
+  margin: 3rem 0 1.5rem;
+}
+
+.gallery-filter {
+  background: none;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  cursor: pointer;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.9rem;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  &.active {
+    background-color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    color: var(--global-hover-text-color);
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  // Three across, the way a feed reads. Kept at three on small screens too —
+  // dropping to one column turns a feed into a scroll of full-bleed photos.
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 1rem;
+
+  @media (max-width: 576px) {
+    gap: 3px;
+  }
+}
+
+.gallery-tile {
+  // Square regardless of the source photo's aspect ratio; the crop is what
+  // makes a mixed set of photos read as one grid.
+  aspect-ratio: 1 / 1;
+  display: block;
+  overflow: hidden;
+  position: relative;
+
+  // <picture> is inline by default, which would leave a baseline gap inside the
+  // square; contents makes the <img> the tile's direct visual child.
+  picture {
+    display: contents;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+    width: 100%;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+
+  &:hover .gallery-tile-overlay {
+    opacity: 1;
+  }
+
+  // Keyboard users get the same affordance as the hover state.
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+
+    .gallery-tile-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.gallery-tile-overlay {
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 55%);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  opacity: 0;
+  padding: 0.6rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-tile-date {
+  // Always on the dark scrim, so this stays white in both themes on purpose.
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.gallery-empty {
+  color: var(--global-text-color-light);
+  padding: 2rem 0;
+  text-align: center;
+}

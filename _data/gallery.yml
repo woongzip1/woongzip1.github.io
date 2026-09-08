@@ -1,0 +1,73 @@
+# Photo feed for /gallery/.
+#
+# Each entry renders one square tile. To add a photo: drop the file under
+# assets/img/gallery/ and add a block here. Newest first — the page renders
+# them in the order listed.
+#
+#   image:    path relative to assets/img/
+#   date:     YYYY-MM, shown on hover and in the lightbox caption
+#   caption:  one short line; what/where
+#   category: concerts | running | everyday  (drives the filter row)
+#
+# NOTE: every entry below is a PLACEHOLDER using the al-folio sample images.
+# Replace the `image` paths and captions with real photos.
+
+- image: 1.jpg
+  date: 2026-03
+  caption: "96th Seoul Marathon, 10km with the lab"
+  category: running
+
+- image: 2.jpg
+  date: 2025-09
+  caption: "MUSE live in Seoul"
+  category: concerts
+
+- image: 3.jpg
+  date: 2025-06
+  caption: "Luv(sic) Hexalogy Asia Tour — OMA & Shing02"
+  category: concerts
+
+- image: 4.jpg
+  date: 2025-04
+  caption: "Ludovico Einaudi at the Sejong Center"
+  category: concerts
+
+- image: 5.jpg
+  date: 2025-03
+  caption: "Morning run along the river"
+  category: running
+
+- image: 6.jpg
+  date: 2024-11
+  caption: "Record store find"
+  category: everyday
+
+- image: 7.jpg
+  date: 2024-08
+  caption: "Summer evening, city walk"
+  category: everyday
+
+- image: 8.jpg
+  date: 2024-05
+  caption: "Lab running crew"
+  category: running
+
+- image: 9.jpg
+  date: 2024-02
+  caption: "Sum 41 farewell show in Korea"
+  category: concerts
+
+- image: 10.jpg
+  date: 2024-01
+  caption: "Ryuichi Sakamoto: Opus — first solo cinema trip"
+  category: everyday
+
+- image: 11.jpg
+  date: 2023-10
+  caption: "Autumn long run"
+  category: running
+
+- image: 12.jpg
+  date: 2023-07
+  caption: "Coffee and notes"
+  category: everyday

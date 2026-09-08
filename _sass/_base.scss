@@ -19,6 +19,20 @@ strong {
   color: var(--global-text-color);
 }
 
+// Headings use the slab serif already loaded for the theme, so the editorial
+// contrast against the sans body text costs no extra font request.
+//
+// The navbar brand is an <a>, not a heading, so it has to be named explicitly —
+// without it the name in the corner stays sans while the page title below it is
+// serif, and the two read as different sites.
+h1,
+h2,
+h3,
+.navbar-brand.title {
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
