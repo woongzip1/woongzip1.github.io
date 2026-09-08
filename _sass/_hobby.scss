@@ -8,10 +8,25 @@
  ******************************************************************************/
 
 .about-me-lede {
-  border-left: 3px solid var(--global-theme-color);
   margin: 0 0 2.5rem;
   max-width: 68ch;
-  padding: 0.25rem 0 0.25rem 1.25rem;
+  padding: 0 0 0 1.25rem; // last value = gap between the rule and the text
+  position: relative;
+
+  // The rule is a pseudo-element, not border-left, so its ends can be trimmed.
+  // A border spans the whole border box, which includes the half-leading that
+  // line-height adds above the first line and below the last (~5px each at
+  // 1rem/1.7) — padding cannot claw that back, and padding cannot go negative.
+  // With top/bottom insets the rule can sit flush with the text, or shorter.
+  &::before {
+    background-color: var(--global-theme-color);
+    bottom: 0.35rem; // ← raise the bottom end
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0.35rem; // ← lower the top end
+    width: 3px; // ← thickness
+  }
 
   p {
     color: var(--global-text-color-light);
