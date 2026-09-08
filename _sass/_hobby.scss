@@ -63,6 +63,15 @@ $updates-spine-offset: 1.5rem;
 $updates-spine-left: 0.25rem;
 $updates-dot-size: 9px;
 
+// Precomputed so the calc() below contains only `-` and never `+`.
+// jekyll-minifier (production builds only) strips the whitespace around `+`
+// inside calc(), and `4.5px+.5px` is invalid CSS — the whole declaration is
+// dropped and the dot falls back to left:auto, off the spine. It preserves the
+// spaces around `-`, so a subtraction-only expression survives minification.
+// Both halves resolve at build time: rem with rem, px with px.
+$updates-dot-inset: $updates-spine-left - $updates-spine-offset; // -1.25rem
+$updates-dot-nudge: math.div($updates-dot-size, 2) - 0.5px; // 4px
+
 .updates {
   list-style: none;
   margin: 1rem 0 0;
@@ -102,9 +111,7 @@ $updates-dot-size: 9px;
     box-sizing: border-box;
     content: "";
     height: $updates-dot-size;
-    left: calc(
-      #{$updates-spine-left} - #{$updates-spine-offset} - #{math.div($updates-dot-size, 2)} + 0.5px
-    );
+    left: calc(#{$updates-dot-inset} - #{$updates-dot-nudge});
     position: absolute;
     top: 0.45rem;
     width: $updates-dot-size;
