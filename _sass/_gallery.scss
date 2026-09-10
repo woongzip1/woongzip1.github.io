@@ -121,6 +121,8 @@ $updates-dot-nudge: 4px; // half the dot (4.5px) less half the spine (0.5px)
   gap: 3px;
   // The intro lines sit right above, so only a small gap here.
   margin: 0.9rem 0 1rem;
+  // max-width
+  max-width: 80%;
 
   @media (max-width: 576px) {
     gap: 2px;
@@ -172,6 +174,10 @@ $updates-dot-nudge: 4px; // half the dot (4.5px) less half the spine (0.5px)
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  // Without this, the global `span { color: var(--global-text-color) }` rule
+  // in _base.scss wins over the white set on the parent .feed-tile-overlay —
+  // a directly matched rule always beats inheritance, regardless of specificity.
+  color: inherit;
 }
 
 // Marker for posts carrying more than one image.
