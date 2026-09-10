@@ -63,7 +63,18 @@
         <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fa-solid fa-square-rss"></i></a>
       {% endif %}
     {% when 'scholar_userid' %}
-      <a href="https://scholar.google.com/citations?user={{ social[1] }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+      {%- comment -%}
+        Drawn inline instead of academicons' ai-google-scholar: that glyph is
+        heavier than the Font Awesome solid icons beside it. This is the same
+        mortarboard at a matching weight, and currentColor makes it inherit the
+        row's grey and its hover colour for free.
+      {%- endcomment -%}
+      <a href="https://scholar.google.com/citations?user={{ social[1] }}" title="Google Scholar">
+        <svg class="icon-scholar" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M12 3 1 9.1l11 6.1 11-6.1z" />
+          <path d="M5.6 12.6v3.6c0 2.1 2.9 3.8 6.4 3.8s6.4-1.7 6.4-3.8v-3.6L12 16.2z" />
+        </svg>
+      </a>
     {% when 'scopus_id' %}
       <a href="https://www.scopus.com/authid/detail.uri?authorId={{ social[1] }}" title="Scopus"><i class="ai ai-scopus"></i></a>
     {% when 'semanticscholar_id' %}

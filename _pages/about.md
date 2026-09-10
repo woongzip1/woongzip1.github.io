@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Student at MIT EECS.
+subtitle: Ph.D. student, MIT EECS
 
 profile:
   align: right
-  image: tempimg.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
@@ -15,7 +15,7 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: false # a scrollbar inside the list breaks the page's quiet; cap with limit instead
   limit: 4 # leave blank to include all the news in the `_news` folder
 
 latest_posts:

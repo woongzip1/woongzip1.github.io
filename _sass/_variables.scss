@@ -23,12 +23,23 @@ $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
-// Site accent (teal). Light mode uses the base tone; dark mode needs the
-// lighter tone to keep text contrast above WCAG AA on the dark background.
-$teal-color: #3c7a89 !default;
-$teal-color-light: #65abbc !default; // $teal-color lightened ~18%
+// -----------------------------------------------------------------------------
+// Site palette (Direction A2, "Editorial + signature waveform").
+// Paper is a cool off-white, never pure #fff; ink is never pure #000.
+// Every pair is light / dark, both verified above WCAG AA on their own ground.
+// -----------------------------------------------------------------------------
+$teal-color: #2d6470 !default; // accent, light mode
+$teal-color-light: #7fb6c2 !default; // accent, dark mode
 
-$grey-color: #828282 !default;
+$paper-color: #f6f6f3 !default; // page background, light
+$paper-color-dark: #181917 !default; // page background, dark
+$ink-color: #1e1f1d !default; // body text, light
+$ink-color-dark: #e8e7e2 !default; // body text, dark
+$footer-bg-color: #e9e9e6 !default; // footer ground, light
+$footer-bg-color-dark: #111210 !default; // footer ground, dark
+
+$grey-color: #6b6d68 !default; // secondary text, light
+$grey-color-dark-text: #9a9b95 !default; // secondary text, dark
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;
@@ -38,8 +49,16 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($teal-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: rgba($teal-color, 0.07);
+$code-bg-color-dark: rgba($teal-color-light, 0.12);
+
+// -----------------------------------------------------------------------------
+// Type stacks. Newsreader for headlines, IBM Plex Sans for everything readable,
+// IBM Plex Mono only for inline `code` keywords.
+// -----------------------------------------------------------------------------
+$font-display: "Newsreader", Georgia, "Times New Roman", serif !default;
+$font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif !default;
+$font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

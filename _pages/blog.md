@@ -1,4 +1,5 @@
 ---
+published: false # kept for a future blog; nothing to list while _posts is empty
 layout: default
 permalink: /blog/
 title: blog

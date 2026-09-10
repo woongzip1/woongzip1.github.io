@@ -1,28 +1,31 @@
-"AJR":
-  url: https://journals.aps.org/
-  color: "#00369f"
-  
-"INTERSPEECH":
-  url: https://www.isca-speech.org/
-  # color: "#5F4B8B" # Deep Purple/Violet
-  color: "#BE123C" # Deep Purple/Violet
-
+# Venue colours. These are used as the 2px underline beneath a publication's
+# venue label — never as a badge background. Each entry needs a `color_dark`
+# bright enough to hold contrast on the dark ground (#181917); entries without
+# one fall back to the site accent.
 "ICASSP":
   url: https://ieeexplore.ieee.org/xpl/conhome/1000002/all-proceedings
-  color: "#003D82" #
-  # color: "#00629B" # IEEE Blue,"#003D82"
+  color: "#2d5b8a"
+  color_dark: "#8db3dc"
+
+"INTERSPEECH":
+  url: https://www.isca-speech.org/
+  color: "#8c3e50"
+  color_dark: "#d69aa8"
 
 "COLM":
   url: https://colmweb.org/
-  color: "#3D8C82" # Dusty Teal
-
-
-"Under Review":
-  color: "#6c757d" # Neutral Gray
+  color: "#2d6470"
+  color_dark: "#7fb6c2"
 
 "Preprint":
-  color: "#6C7A89" # Neutral Gray
+  color: "#6b6d68"
+  color_dark: "#9a9b95"
+
+"Under Review":
+  color: "#6b6d68"
+  color_dark: "#9a9b95"
 
 "Domestic":
   url: https://www.dbpia.co.kr/
-  color: "#28a745" # Professional Green
+  color: "#4f7a4a"
+  color_dark: "#9cc596"

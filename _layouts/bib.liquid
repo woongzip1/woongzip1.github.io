@@ -1,49 +1,45 @@
 ---
 ---
 <div class="row">
-  {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
+  {%- comment -%}
+    The venue label column is always rendered — it is the entry's left rail, not
+    a thumbnail slot. The colour is passed down as custom properties and applied
+    by CSS to the 2px underline only, so light and dark can pick their own tone.
+    The year is deliberately not appended: .periodical below already prints
+    venue and year, and "INTERSPEECH 2026" overflows the 6.5rem column.
+  {%- endcomment -%}
+  <div class="col col-sm-2 abbr">
+    {%- if entry.abbr -%}
+      {%- assign venue = site.data.venues[entry.abbr] -%}
+      <abbr
+        class="venue-label"
+        {% if venue.color %}style="--venue-c:{{ venue.color }};--venue-c-dark:{{ venue.color_dark | default: venue.color }}"{% endif %}
+      >
+        {%- if venue.url -%}
+          <a href="{{ venue.url }}">{{ entry.abbr }}</a>
+        {%- else -%}
+          {{- entry.abbr -}}
+        {%- endif -%}
+      </abbr>
+    {%- endif -%}
+    {% if site.enable_publication_thumbnails and entry.preview %}
+      {% if entry.preview contains '://' %}
+        <img class="preview" src="{{ entry.preview }}">
+      {% else %}
+        {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=entry_path
+          sizes = "200px"
+          class="preview"
+          zoomable=true
+          avoid_scaling=true
+          alt=entry.preview
+        %}
       {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.preview
-          %}
-        {% endif %}
-      {% endif %}
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
 
   <!-- Entry bib key -->
   {%- comment -%}

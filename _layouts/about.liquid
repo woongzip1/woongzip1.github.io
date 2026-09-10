@@ -12,6 +12,14 @@ layout: default
       {% endif %}
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
+    {%- comment -%}
+      Signature waveform: a damped sine (9.5 cycles, amplitude 7.5 about the
+      centre line) sampled as a 261-point polyline. This is the site's only
+      decorative graphic — do not repeat it on other pages.
+    {%- endcomment -%}
+    <svg class="signature-wave" viewBox="0 0 260 22" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="{{ site.data.wave.about }}" />
+    </svg>
   </header>
 
   <article>
@@ -19,11 +27,14 @@ layout: default
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {%- comment -%}
+            No z-depth-1: the design carries no box shadows. Corner rounding is
+            handled by .profile img in _base.scss, not Bootstrap's .rounded.
+          {%- endcomment -%}
           {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% assign profile_image_class = 'img-fluid rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
@@ -31,6 +42,19 @@ layout: default
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
+        {% endif %}
+        {%- comment -%}
+          Contact links sit under the portrait rather than in a full-width block
+          at the foot of the page: they are identity metadata, and at 4rem they
+          were the loudest thing on the page.
+        {%- endcomment -%}
+        {% if page.social %}
+          <div class="profile-social">
+            <div class="contact-icons">{% include social.liquid %}</div>
+            {% if site.contact_note %}
+              <div class="contact-note">{{ site.contact_note }}</div>
+            {% endif %}
+          </div>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -63,15 +87,6 @@ layout: default
           <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
         </h2>
         {% include selected_papers.liquid %}
-      </div>
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
 

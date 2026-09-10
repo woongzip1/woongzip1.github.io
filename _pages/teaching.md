@@ -1,4 +1,5 @@
 ---
+published: false # still al-folio's placeholder copy
 layout: page
 permalink: /teaching/
 title: teaching

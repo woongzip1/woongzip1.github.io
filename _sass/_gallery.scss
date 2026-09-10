@@ -1,122 +1,189 @@
 /*******************************************************************************
- * Photo feed, embedded in /more-about-me/.
+ * /more-about-me/ — bio, an updates timeline, and a 3-up grid of album sleeves.
  *
- * Deliberately an Instagram-style feed rather than a masonry wall: uniform
- * square tiles on a tight gutter, no per-tile captions. The photos carry the
- * page, so the only chrome is the filter row and a hover overlay.
+ * The tiles are not interactive: the sleeve and its hover caption are the whole
+ * content, so there is nothing to open. No filter tabs, no hover zoom.
+ * The only gradient in the design is the tile scrim, which exists so the
+ * caption stays readable over arbitrary artwork.
  ******************************************************************************/
 
-.gallery-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  // Sits below the updates list, so it needs a clear break above it.
-  margin: 3rem 0 1.5rem;
+.feed-bio {
+  max-width: 62ch;
+  margin-bottom: 0.6rem;
+
+  strong {
+    font-weight: 600;
+  }
 }
 
-.gallery-filter {
-  background: none;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 999px;
+// Sits above the album grid, with a clear break from the updates list.
+.feed-albums-intro {
   color: var(--global-text-color-light);
-  cursor: pointer;
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
-  padding: 0.35rem 0.9rem;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease;
-
-  &:hover {
-    border-color: var(--global-theme-color);
-    color: var(--global-theme-color);
-  }
-
-  &.active {
-    background-color: var(--global-theme-color);
-    border-color: var(--global-theme-color);
-    color: var(--global-hover-text-color);
-  }
+  font-size: 0.875rem;
+  max-width: 62ch;
+  margin: 2.5rem 0 0;
 }
 
-.gallery-grid {
-  display: grid;
-  // Three across, the way a feed reads. Kept at three on small screens too —
-  // dropping to one column turns a feed into a scroll of full-bleed photos.
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-bottom: 1rem;
+/*******************************************************************************
+ * Latest updates — dated one-liners on a spine with a dot per entry.
+ *
+ * Named `updates`, not `timeline`: _cv.scss already owns `ul.timeline`, and its
+ * `ul.timeline li::before` (specificity 0,1,2) outranks anything written here
+ * as `.x-item::before` (0,1,1) — it would repaint the dot as the CV's 1px rule
+ * and land it on top of the spine.
+ ******************************************************************************/
 
-  @media (max-width: 576px) {
-    gap: 3px;
-  }
+$updates-spine-offset: 1.5rem;
+$updates-spine-left: 0.25rem;
+$updates-dot-size: 9px;
+
+// Precomputed so the calc() below contains only `-` and never `+`.
+// jekyll-minifier (production builds only) strips the whitespace around `+`
+// inside calc(), and `4.5px+.5px` is invalid CSS — the whole declaration is
+// dropped and the dot falls back to left:auto, off the spine. Spaces around `-`
+// survive, so a subtraction-only expression is safe.
+$updates-dot-inset: $updates-spine-left - $updates-spine-offset; // -1.25rem
+$updates-dot-nudge: 4px; // half the dot (4.5px) less half the spine (0.5px)
+
+.feed-updates-title {
+  font-size: 1.375rem;
+  margin: 1.75rem 0 0;
 }
 
-.gallery-tile {
-  // Square regardless of the source photo's aspect ratio; the crop is what
-  // makes a mixed set of photos read as one grid.
-  aspect-ratio: 1 / 1;
-  display: block;
-  overflow: hidden;
+.updates {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0 0 0 $updates-spine-offset;
   position: relative;
 
-  // <picture> is inline by default, which would leave a baseline gap inside the
-  // square; contents makes the <img> the tile's direct visual child.
+  // The spine.
+  &::before {
+    background-color: var(--global-divider-color);
+    bottom: 0.5rem;
+    content: "";
+    left: $updates-spine-left;
+    position: absolute;
+    top: 0.5rem;
+    width: 1px;
+  }
+}
+
+.updates-item {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+  padding-bottom: 0.6rem;
+  position: relative;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  // The dot, centred on the spine: back out the list padding, land on the
+  // spine, then pull left by half the dot to straddle it.
+  &::before {
+    background-color: var(--global-bg-color);
+    border: 2px solid var(--global-theme-color);
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    height: $updates-dot-size;
+    left: calc(#{$updates-dot-inset} - #{$updates-dot-nudge});
+    position: absolute;
+    top: 0.45rem;
+    width: $updates-dot-size;
+  }
+}
+
+.updates-date {
+  // Grey and sentence case, matching the News dates. The design forbids
+  // all-caps eyebrow labels, which is what this used to be.
+  color: var(--global-text-color-light);
+  flex: 0 0 5.5rem;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.updates-text {
+  flex: 1 1 16rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/*******************************************************************************
+ * Grid
+ ******************************************************************************/
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  // The intro lines sit right above, so only a small gap here.
+  margin: 0.9rem 0 1rem;
+
+  @media (max-width: 576px) {
+    gap: 2px;
+  }
+}
+
+.feed-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: block;
+  background: var(--global-card-bg-color);
+  margin: 0;
+
   picture {
     display: contents;
   }
 
   img {
-    display: block;
+    width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.35s ease;
-    width: 100%;
+    display: block;
   }
 
-  &:hover img {
-    transform: scale(1.04);
-  }
-
-  &:hover .gallery-tile-overlay {
+  &:hover .feed-tile-overlay {
     opacity: 1;
   }
-
-  // Keyboard users get the same affordance as the hover state.
-  &:focus-visible {
-    outline: 2px solid var(--global-theme-color);
-    outline-offset: 2px;
-
-    .gallery-tile-overlay {
-      opacity: 1;
-    }
-  }
 }
 
-.gallery-tile-overlay {
-  align-items: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 55%);
-  bottom: 0;
-  display: flex;
-  left: 0;
-  opacity: 0;
-  padding: 0.6rem;
+.feed-tile-overlay {
   position: absolute;
-  right: 0;
-  top: 0;
-  transition: opacity 0.25s ease;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.5rem;
+  font-family: $font-body;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.92);
+  // The one permitted gradient: a scrim for legibility over a photo.
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.gallery-tile-date {
-  // Always on the dark scrim, so this stays white in both themes on purpose.
-  color: #fff;
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
+.feed-tile-caption {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.gallery-empty {
-  color: var(--global-text-color-light);
-  padding: 2rem 0;
-  text-align: center;
+// Marker for posts carrying more than one image.
+.feed-tile-multi::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid #fff;
+  border-radius: 2px;
+  box-shadow: 2px -2px 0 -0.5px #fff;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
 }

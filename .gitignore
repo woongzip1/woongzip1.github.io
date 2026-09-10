@@ -12,6 +12,7 @@ node_modules/
 vendor
 .idea
 CLAUDE.md
+site-redesign-spec.md
 tasks.md
 todo.md
 load_hp.sh

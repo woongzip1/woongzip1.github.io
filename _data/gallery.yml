@@ -1,73 +1,51 @@
-# Photo feed for /gallery/.
+# Feed posts for /more-about-me/ — records worth coming back to.
 #
-# Each entry renders one square tile. To add a photo: drop the file under
-# assets/img/gallery/ and add a block here. Newest first — the page renders
-# them in the order listed.
+# Schema
+#   id      slug used for the DOM id and the share hash (#post-<id>)
+#   images  one or more paths under assets/img/. The first is the tile thumbnail;
+#           two or more puts a "multiple" marker on the tile.
+#   title   modal heading, also the tile hover label
+#   date    optional, YYYY-MM → "Sep 2025". Omitted here on purpose.
+#   place   optional, shown after the date as " · <place>"
+#   body    optional markdown. Omitted here, so the modal shows the title alone.
+#   link    optional, renders "Read the full post" at the bottom of the modal
+#   tags    optional, not rendered yet; kept for a future blog tag link-up
 #
-#   image:    path relative to assets/img/
-#   date:     YYYY-MM, shown on hover and in the lightbox caption
-#   caption:  one short line; what/where
-#   category: concerts | running | everyday  (drives the filter row)
-#
-# NOTE: every entry below is a PLACEHOLDER using the al-folio sample images.
-# Replace the `image` paths and captions with real photos.
+# Grouped by genre: soul, then hip-hop, then jazz and classical.
+# Sleeves are already square, so nothing is lost to the 1:1 tile crop.
 
-- image: 1.jpg
-  date: 2026-03
-  caption: "96th Seoul Marathon, 10km with the lab"
-  category: running
+- id: cleo-sol-mother
+  images:
+    - gallery/albums/cleo-sol-mother.jpg
+  title: Cleo Sol — Mother
+  tags: [soul]
 
-- image: 2.jpg
-  date: 2025-09
-  caption: "MUSE live in Seoul"
-  category: concerts
+- id: erykah-badu-baduizm
+  images:
+    - gallery/albums/erykah-badu-baduizm.jpg
+  title: Erykah Badu — Baduizm
+  tags: [soul]
 
-- image: 3.jpg
-  date: 2025-06
-  caption: "Luv(sic) Hexalogy Asia Tour — OMA & Shing02"
-  category: concerts
+- id: mac-ayres-magic-8-ball
+  images:
+    - gallery/albums/mac-ayres-magic-8-ball.jpg
+  title: Mac Ayres — Magic 8 Ball
+  tags: [soul]
 
-- image: 4.jpg
-  date: 2025-04
-  caption: "Ludovico Einaudi at the Sejong Center"
-  category: concerts
+- id: nujabes-luvsic
+  images:
+    - gallery/albums/nujabes-luvsic.jpg
+  title: Nujabes — Luv(sic) Hexalogy
+  tags: [hip-hop]
 
-- image: 5.jpg
-  date: 2025-03
-  caption: "Morning run along the river"
-  category: running
+- id: ryo-fukui-scenery
+  images:
+    - gallery/albums/ryo-fukui-scenery.jpg
+  title: Ryo Fukui — Scenery
+  tags: [jazz]
 
-- image: 6.jpg
-  date: 2024-11
-  caption: "Record store find"
-  category: everyday
-
-- image: 7.jpg
-  date: 2024-08
-  caption: "Summer evening, city walk"
-  category: everyday
-
-- image: 8.jpg
-  date: 2024-05
-  caption: "Lab running crew"
-  category: running
-
-- image: 9.jpg
-  date: 2024-02
-  caption: "Sum 41 farewell show in Korea"
-  category: concerts
-
-- image: 10.jpg
-  date: 2024-01
-  caption: "Ryuichi Sakamoto: Opus — first solo cinema trip"
-  category: everyday
-
-- image: 11.jpg
-  date: 2023-10
-  caption: "Autumn long run"
-  category: running
-
-- image: 12.jpg
-  date: 2023-07
-  caption: "Coffee and notes"
-  category: everyday
+- id: ryuichi-sakamoto-opus
+  images:
+    - gallery/albums/ryuichi-sakamoto-opus.jpg
+  title: Ryuichi Sakamoto — Opus
+  tags: [classical]

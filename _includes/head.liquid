@@ -187,3 +187,16 @@
 {% if page.tikzjax %}
   <link defer rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
 {% endif %}
+
+{%- comment -%}
+  GoatCounter: admin-only visitor stats. No cookies, no identifiers, no consent
+  banner, and nothing rendered on the page — the dashboard lives behind the
+  owner's login at https://<code>.goatcounter.com.
+{%- endcomment -%}
+{% if site.enable_goatcounter_analytics and site.goatcounter_analytics != blank %}
+  <script
+    data-goatcounter="https://{{ site.goatcounter_analytics }}.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js"
+  ></script>
+{% endif %}

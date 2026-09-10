@@ -19,18 +19,76 @@ strong {
   color: var(--global-text-color);
 }
 
-// Headings use the slab serif already loaded for the theme, so the editorial
-// contrast against the sans body text costs no extra font request.
-//
+// -----------------------------------------------------------------------------
+// Type system. Newsreader carries the headlines, IBM Plex Sans the body, and
+// IBM Plex Mono is reserved for inline `code` keywords only. Bootstrap sets the
+// body stack from its own reset, so body is named explicitly here to win.
+// -----------------------------------------------------------------------------
+body {
+  font-family: $font-body;
+  font-size: 0.95rem;
+  // mdbootstrap sets body to weight 300, which this family is not loaded at.
+  font-weight: 400;
+  line-height: 1.7;
+}
+
 // The navbar brand is an <a>, not a heading, so it has to be named explicitly —
 // without it the name in the corner stays sans while the page title below it is
 // serif, and the two read as different sites.
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 .navbar-brand.title {
-  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+  font-family: $font-display;
+  font-weight: 500;
   letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.375rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: $font-mono;
+}
+
+// Body links read as text on a hairline rule rather than a browser underline.
+a,
+table.table a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+// Only prose links get the rule. Scoping by `p >` / `li >` keeps it off the
+// section headings (<h2><a>News</a></h2>) and off the social icons, which are
+// direct children of .contact-icons rather than of a paragraph.
+//
+// The rule is drawn on hover only: links inside running text are frequent
+// enough here that a permanent underline speckled the paragraphs. The border is
+// kept transparent rather than removed so hovering does not shift the line.
+.post > article p > a:not(.btn),
+.post > article li > a:not(.btn),
+.news-list div a {
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom-color: var(--global-theme-color);
+  }
 }
 
 hr {
@@ -49,18 +107,8 @@ table {
   }
 }
 
-a,
-table.table a {
-  color: var(--global-theme-color);
-
-  &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
-  }
-
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
-  }
+a:hover:after :not(.nav-item.dropdown) {
+  width: 100%;
 }
 
 .table-dark {
@@ -209,15 +257,78 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  // No z-depth shadow and no circle crop: the portrait is a flat 2px-cornered
+  // plate, matching the rest of the page's geometry.
+  img {
+    border-radius: 2px;
+    box-shadow: none;
+    background-color: var(--global-image-placeholder);
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: $font-body;
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
 
     p {
       display: inline-block;
       margin: 0;
     }
+  }
+}
+
+// Contact links beneath the portrait, aligned to its right edge so the row
+// ends flush with the photo instead of floating loose under it.
+//
+// ── Two knobs ──────────────────────────────────────────────────────────────
+//   font-size  icon size. 1.1rem was too small; 1.45rem reads as a control
+//              without competing with the name.
+//   gap        spacing between icons.
+// ---------------------------------------------------------------------------
+.profile-social {
+  margin-top: 0.6rem;
+
+  .contact-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-size: 1.45rem;
+    line-height: 1;
+
+    a {
+      border-bottom: 0;
+      // The inline Google Scholar mark inherits this via currentColor; the
+      // Font Awesome glyphs take it through their ::before.
+      color: var(--global-text-color-light);
+      display: inline-flex;
+      align-items: center;
+
+      i::before {
+        color: inherit;
+        transition: color 0.2s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: var(--global-theme-color);
+      }
+    }
+
+    // Sized in em so it tracks .contact-icons' font-size with the other icons.
+    .icon-scholar {
+      width: 1em;
+      height: 1em;
+      transition: color 0.2s ease-in-out;
+    }
+  }
+
+  .contact-note {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.4rem;
+    text-align: right;
   }
 }
 
@@ -302,7 +413,11 @@ ul.task-list input[type="checkbox"] {
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    font-family: $font-display;
+    font-size: 0.95rem;
+    // Inactive tabs recede; the current page is the only one at full ink.
+    color: var(--global-text-color-light);
+    text-decoration: none;
 
     &:hover {
       color: var(--global-hover-color);
@@ -311,8 +426,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
-    color: var(--global-theme-color);
+    font-weight: 500;
+    color: var(--global-text-color);
 
     &:hover {
       color: var(--global-hover-color);
@@ -488,7 +603,8 @@ ul.task-list input[type="checkbox"] {
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+  font-family: $font-body;
+  font-size: 0.8rem;
 
   .container {
     color: var(--global-footer-text-color);
@@ -511,7 +627,8 @@ footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 0.9rem;
+  font-family: $font-body;
+  font-size: 0.8rem;
 
   .container {
     text-align: center;
@@ -594,6 +711,88 @@ footer.sticky-bottom {
 .post-title {
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// About page header: name, subtitle, signature waveform.
+// -----------------------------------------------------------------------------
+.about-page {
+  .post-title {
+    font-size: 2.5rem;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+  }
+
+  // Subtitle is plain sans, never italic or serif — an italic serif here read
+  // as handwriting in review.
+  p.desc {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    font-style: normal;
+    color: var(--global-text-color-light);
+    margin-bottom: 0;
+  }
+
+  article p {
+    max-width: 62ch;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// News: dated lines on hairline rules. Dates use tabular figures so the column
+// stays aligned regardless of month width.
+// -----------------------------------------------------------------------------
+.news-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+
+  li {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.9rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+  }
+
+  time {
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  div {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 576px) {
+    li {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+  }
+}
+
+// The site's one signature graphic. Never repeat it on another page.
+.signature-wave {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: 22px;
+  margin: 0.15rem 0 1.1rem;
+
+  path {
+    fill: none;
+    stroke: var(--global-wave-color);
+    stroke-width: 0.9;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
   }
 }
 
@@ -714,8 +913,57 @@ footer.sticky-bottom {
 
 // Publications
 
+// -----------------------------------------------------------------------------
+// Venue label: grey text carrying the venue's colour in a 2px underline. The
+// per-venue colour arrives as --venue-c / --venue-c-dark from bib.liquid, so a
+// venue missing from venues.yml falls back to the site accent.
+// -----------------------------------------------------------------------------
+.venue-label {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color-light);
+  border-bottom: 2px solid var(--venue-c, var(--global-theme-color));
+  padding-bottom: 2px;
+  text-decoration: none;
+  background: none;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 0;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+html[data-theme="dark"] .venue-label {
+  border-bottom-color: var(--venue-c-dark, var(--global-theme-color));
+}
+
 .publications {
   margin-top: 2rem;
+
+  // Fixed left rail so every entry's title starts at the same x; the content
+  // column then takes whatever is left instead of Bootstrap's 83.3%. Scoped to
+  // sm and up so the label still stacks above the title on phones — at 375px a
+  // 6.5rem rail would leave the title about 270px wide.
+  @media (min-width: 576px) {
+    .col.col-sm-2.abbr {
+      flex: 0 0 6.5rem;
+      max-width: 6.5rem;
+    }
+
+    .col-sm-10 {
+      flex: 1 1 auto;
+      max-width: none;
+    }
+  }
 
   h1 {
     color: var(--global-theme-color);
@@ -747,28 +995,16 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      // Entries are separated by a hairline rather than whitespace alone.
+      padding: 1rem 0;
+      border-top: 1px solid var(--global-divider-color);
 
-      .preview {
+      &:last-child {
+        border-bottom: 1px solid var(--global-divider-color);
       }
 
       .abbr {
         margin-bottom: 0.5rem;
-
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
 
         .award {
           color: var(--global-theme-color) !important;
@@ -777,22 +1013,30 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 600;
       }
 
       .author {
+        color: var(--global-text-color-light);
+        font-size: 0.875rem;
+
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          // Hover-only, matching prose links elsewhere.
+          border-bottom: 1px solid transparent;
 
           &:hover {
-            border-bottom-style: solid;
+            border-bottom-color: var(--global-theme-color);
             text-decoration: none;
           }
         }
 
+        // The site owner's own name: full ink, slightly heavier, never italic
+        // and never underlined.
         > em {
-          border-bottom: 1px solid;
+          color: var(--global-text-color);
           font-style: normal;
+          font-weight: 500;
+          border-bottom: 0;
         }
 
         > span.more-authors {
@@ -807,14 +1051,20 @@ footer.sticky-bottom {
         }
       }
 
+      .periodical {
+        color: var(--global-text-color-light);
+        font-size: 0.875rem;
+      }
+
       .links {
+        margin-top: 0.4rem;
+
         a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          font-size: 0.75rem;
+          color: var(--global-theme-color);
+          border: 1px solid var(--global-accent-soft);
+          border-radius: 3px;
+          padding: 0.15rem 0.6rem;
           margin-left: 0;
 
           &:hover {
