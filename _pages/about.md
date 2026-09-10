@@ -23,7 +23,7 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Hello! I am a Ph.D. student in EECS at [MIT](https://www.eecs.mit.edu/), working with Prof. [Paris Smaragdis](https://www.mit.edu/~paris/). <br>I received my B.S. and M.S. in Electrical and Electronic Engineering from [Yonsei University](https://www.yonsei.ac.kr/sites/en_sc/index.do) (South Korea) and worked at [DSPAI Lab](http://dsp.yonsei.ac.kr/) under Prof. [Hong-Goo Kang](https://scholar.google.com/citations?user=YsD8KCYAAAAJ&hl=en). 
+Hello! I am a Ph.D. student in EECS at [MIT](https://www.eecs.mit.edu/), working with Prof. [Paris Smaragdis](https://www.mit.edu/~paris/). <br>I received my B.S. and M.S. in Electrical and Electronic Engineering from [Yonsei University](https://www.yonsei.ac.kr/sites/en_sc/index.do) (South Korea) and worked at [DSPAI Lab](http://dsp.yonsei.ac.kr/) with Prof. [Hong-Goo Kang](https://scholar.google.com/citations?user=YsD8KCYAAAAJ&hl=en). 
 <br>My primary research goal is to bridge the gap between classic signal processing and modern deep learning, with interests spanning `audio and speech processing`, `audio compression`, and `generative models`.
 
 My first research experience as an undergraduate at the [SRIP Lab](http://srip.yonsei.ac.kr/xe/) involved implementing and analyzing traditional image signal processing algorithms such as `denoising`, `demosaicing`, and `super-resolution`. This interest in combining established algorithms with data-driven approaches has continued throughout my graduate studies.
