@@ -4,6 +4,9 @@
 #   date  YYYY-MM, shown as "Mar 2026"
 #   text  one line. Markdown is not processed here, so keep it plain.
 
+- date: 2026-07
+  text: My second concert at Luv(sic) Hexalogy with OMA and Shing02.
+
 - date: 2026-03
   text: Ran the 96th Seoul Marathon (10km) with my lab members and our advisor.
 
