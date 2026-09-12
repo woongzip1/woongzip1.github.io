@@ -32,10 +32,22 @@
   title: Mac Ayres — Magic 8 Ball
   tags: [soul]
 
+- id: sade-love-deluxe
+  images:
+    - gallery/albums/sade-love-deluxe.jpg
+  title: Sade — Love Deluxe
+  tags: [soul]
+
 - id: nujabes-luvsic
   images:
     - gallery/albums/nujabes-luvsic.jpg
   title: Nujabes — Luv(sic) Hexalogy
+  tags: [hip-hop]
+
+- id: mac-miller-circles
+  images:
+    - gallery/albums/mac-miller-circles.jpg
+  title: Mac Miller — Circles
   tags: [hip-hop]
 
 - id: ryo-fukui-scenery
@@ -49,3 +61,11 @@
     - gallery/albums/ryuichi-sakamoto-opus.jpg
   title: Ryuichi Sakamoto — Opus
   tags: [classical]
+
+# TODO: confirm this title — "Tyber" doesn't match any FKJ release I could verify
+# (known albums are the self-titled FKJ (2017) and V I N C E N T (2021)).
+- id: fkj-tyber
+  images:
+    - gallery/albums/fkj-tyber.jpg
+  title: FKJ — Tyber
+  tags: [funk]
