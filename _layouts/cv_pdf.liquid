@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% if page.cv_pdf contains '://' %}
+  {% assign cv_pdf_url = page.cv_pdf %}
+{% else %}
+  {% assign cv_pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+{% endif %}
+{% assign cv_pdf_name = cv_pdf_url | split: '/' | last %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    <div
+      class="cv-pdf"
+      data-pdf-url="{{ cv_pdf_url }}"
+      data-pdfjs-src="{{ site.third_party_libraries.pdfjs.url.js }}"
+      data-pdfjs-worker="{{ site.third_party_libraries.pdfjs.url.worker }}"
+    >
+      <div class="cv-pdf-toolbar">
+        <a class="cv-pdf-download" href="{{ cv_pdf_url }}" download="{{ cv_pdf_name }}">Download CV (PDF)</a>
+        <div class="cv-pdf-zoom" hidden>
+          <button type="button" class="cv-pdf-zoom-btn" data-zoom="out" aria-label="Zoom out">&minus;</button>
+          <span class="cv-pdf-zoom-level">100%</span>
+          <button type="button" class="cv-pdf-zoom-btn" data-zoom="in" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+
+      <div class="cv-pdf-pages"></div>
+
+      <p class="cv-pdf-fallback">
+        This browser cannot display the CV inline.
+        <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Open the PDF in a new tab</a>.
+      </p>
+    </div>
+  </article>
+</div>
+
+<script defer src="{{ '/assets/js/cv-pdf.js' | relative_url | bust_file_cache }}"></script>

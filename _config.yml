@@ -546,6 +546,13 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe-lightbox.esm.min.js"
     version: "5.4.4"
+  pdfjs:
+    # No integrity hash: the CV viewer pulls this in with a dynamic import()
+    # (assets/js/cv-pdf.js), which has no SRI equivalent. Pin the version here.
+    url:
+      js: "https://cdn.jsdelivr.net/npm/pdfjs-dist@{{version}}/build/pdf.min.mjs"
+      worker: "https://cdn.jsdelivr.net/npm/pdfjs-dist@{{version}}/build/pdf.worker.min.mjs"
+    version: "4.10.38"
   plotly:
     integrity:
       js: "sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q="

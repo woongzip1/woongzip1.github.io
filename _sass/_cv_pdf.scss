@@ -1,0 +1,133 @@
+/*******************************************************************************
+ * Inline PDF viewer for /cv/ (rendered by assets/js/cv-pdf.js).
+ * The PDF pages stay white paper in dark mode by design; only the surrounding
+ * chrome follows the theme.
+ ******************************************************************************/
+
+.cv-pdf {
+  margin-top: 1.5rem;
+
+  [hidden] {
+    display: none;
+  }
+}
+
+.cv-pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.cv-pdf-download {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--global-accent-soft);
+  border-radius: 3px;
+  color: var(--global-theme-color);
+  font-size: 0.75rem;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+}
+
+.cv-pdf-zoom {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cv-pdf-zoom-btn {
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 3px;
+  background: none;
+  color: var(--global-text-color);
+  line-height: 1;
+
+  &:hover:not(:disabled) {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+.cv-pdf-zoom-level {
+  min-width: 2.8rem;
+  color: var(--global-text-color-light);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.cv-pdf-pages {
+  display: flex;
+  flex-direction: column;
+  // "safe" keeps the pages centred until a zoomed page is wider than the
+  // viewer, then falls back to start alignment so the left edge stays
+  // reachable -- a centred overflowing flex item cannot be scrolled to.
+  align-items: safe center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  overflow-x: auto;
+}
+
+.cv-pdf-page {
+  position: relative;
+  flex: none;
+  border: 1px solid var(--global-divider-color);
+  background-color: #fff;
+
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Transparent copy of the page text, laid over the canvas by pdf.js so the CV
+   stays selectable and searchable. Positions come from the inline styles
+   pdf.js writes, which read the --scale-factor set on .cv-pdf-page. */
+.cv-pdf-page .textLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  line-height: 1;
+  forced-color-adjust: none;
+  text-size-adjust: none;
+
+  span,
+  br {
+    position: absolute;
+    color: transparent;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0 0;
+  }
+
+  span::selection {
+    background-color: var(--global-accent-soft);
+  }
+}
+
+.cv-pdf-links a {
+  position: absolute;
+  display: block;
+}
+
+.cv-pdf-fallback {
+  margin-top: 1.2rem;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
