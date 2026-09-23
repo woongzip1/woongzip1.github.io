@@ -28,6 +28,6 @@ Hello! I am a Ph.D. student in EECS at [MIT](https://www.eecs.mit.edu/), working
 
 My first research experience as an undergraduate at the [SRIP Lab](http://srip.yonsei.ac.kr/xe/) involved implementing and analyzing traditional image signal processing algorithms such as `denoising`, `demosaicing`, and `super-resolution`. This interest in combining established algorithms with data-driven approaches has continued throughout my graduate studies.
 
-During my M.S., I focused on `neural audio codecs` and `audio super-resolution`. Specifically, I worked on non-blind bandwidth extension using side information for legacy audio codec enhancement, as well as blind audio super-resolution using flow matching, where both approaches are grounded in `time-frequency and subband analysis`. Currently, my research interests extend to audio tokenization and generative models for audio, with additional experience in multilingual speech processing.
+During my M.S., I focused on `neural audio codecs` and `audio super-resolution`. Specifically, I worked on non-blind bandwidth extension using side information for legacy audio codec enhancement, as well as blind audio super-resolution using flow matching, where both approaches are grounded in `time-frequency and subband analysis`. Currently, my research interests extend to `audio tokenization` and `generative models for audio`, with additional experience in `multilingual speech processing`.
 
 <br>
