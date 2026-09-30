@@ -2,25 +2,28 @@
 # Newest first — rendered in this order, one line each.
 #
 #   date  YYYY-MM, shown as "Mar 2026"
-#   text  one line. Markdown is not processed here, so keep it plain.
+#   text  one line. Markdown is not processed here; use <strong> for bold.
+
+- date: 2026-09
+  text: Went to <strong>wave to earth</strong> - the pieces tour, my first concert in Boston.
 
 - date: 2026-07
-  text: My second concert at Luv(sic) Hexalogy with OMA and Shing02.
+  text: My second concert at <strong>Luv(sic) Hexalogy</strong> with <strong>OMA</strong> and <strong>Shing02</strong>.
 
 - date: 2026-03
-  text: Ran the 96th Seoul Marathon (10km) with my lab members and our advisor.
+  text: Ran the 96th <strong>Seoul Marathon</strong> (10km) with my lab members and our advisor.
 
 - date: 2025-09
-  text: Saw MUSE live in Seoul, after years of waiting to see my favorite band.
+  text: Saw <strong>MUSE</strong> live in Seoul, after years of waiting to see my favorite band.
 
 - date: 2025-06
-  text: Luv(sic) Hexalogy Asia Tour with OMA and Shing02, a tribute to Nujabes.
+  text: <strong>Luv(sic) Hexalogy</strong> Asia Tour with <strong>OMA</strong> and <strong>Shing02</strong>, a tribute to <strong>Nujabes</strong>.
 
 - date: 2025-04
-  text: Ludovico Einaudi's piano recital at the Sejong Center.
+  text: <strong>Ludovico Einaudi</strong>'s piano recital at the Sejong Center.
 
 - date: 2024-02
-  text: Caught Sum 41's final show in Korea before they disbanded.
+  text: Caught <strong>Sum 41</strong>'s final show in Korea before they disbanded.
 
 - date: 2024-01
-  text: "Watched Ryuichi Sakamoto: Opus — my first time at the cinema alone."
+  text: "Watched <strong>Ryuichi Sakamoto</strong>: <strong>Opus</strong> — my first time at the cinema alone."
